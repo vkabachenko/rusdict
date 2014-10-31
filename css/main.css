@@ -1,0 +1,43 @@
+html {
+    height:100%;
+}
+
+body
+{
+	background: #fafafa;
+    height:100%;
+}
+
+
+.navbar {
+    margin-bottom: 0;
+}
+
+
+#main {
+    background: #e9f6d5;
+    min-height:100%;
+    padding: 10px;
+}
+
+
+
+.article p
+{
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.portlet {
+    border:1px solid #2c2c98;
+    margin-bottom: 20px;
+}
+
+.portlet-title {
+    background: #2c2c98;
+    color:#ffffff;
+    text-align: center;
+    font-weight: bold;
+    padding:10px 0;
+    margin-bottom: 10px;
+}
