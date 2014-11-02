@@ -126,6 +126,7 @@ class FileController extends Controller{
 
     }
 
+
     public function loadModel($id)
     {
         $model=Files::model()->findByPk($id);

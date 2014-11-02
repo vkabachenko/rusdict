@@ -28,9 +28,6 @@ class User extends CActiveRecord
 			array('password', 'required'),
 			array('username', 'length', 'max'=>30),
 			array('password', 'length', 'max'=>256),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('username, password', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,31 +53,6 @@ class User extends CActiveRecord
 		);
 	}
 
-	/**
-	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
-	 * @return CActiveDataProvider the data provider that can return the models
-	 * based on the search/filter conditions.
-	 */
-	public function search()
-	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
-
-		$criteria=new CDbCriteria;
-
-		$criteria->compare('username',$this->username,true);
-		$criteria->compare('password',$this->password,true);
-
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
 
     public function validatePassword($password)
     {
