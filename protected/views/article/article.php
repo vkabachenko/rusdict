@@ -26,13 +26,6 @@ $this->pageTitle=Yii::app()->name;
 <?php endif; ?>
 
 
-<?php if ($this->hasLinks($model->id)): ?>
-
-<h3>Ссылки</h3>
-<?php echo TbHtml::stackedPills($this->articleLinks($model->id)); ?>
-
-<?php endif; ?>
-
 <?php if ($model->terms): ?>
 
 <h3>Термины</h3>
@@ -41,6 +34,22 @@ $this->pageTitle=Yii::app()->name;
 </p>
 
 <?php endif; ?>
+
+ <?php if ($this->hasLinks($model->id)): ?>
+
+        <h3>Ссылки</h3>
+        <?php echo TbHtml::stackedPills($this->articleLinks($model->id)); ?>
+
+ <?php endif; ?>
+
+<?php if ($this->hasFiles($model->id)): ?>
+
+    <h3>Материалы</h3>
+    <?php echo TbHtml::stackedPills($this->articleFiles($model->id)); ?>
+
+<?php endif; ?>
+
+
 
 <?php
 // модальное окно подтверждения удаления

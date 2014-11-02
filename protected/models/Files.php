@@ -29,8 +29,8 @@ class Files extends CActiveRecord
 		// will receive user inputs.
 		return array(
 
-            array('document','file','types'=>'doc,docx,odt,pdf,ppt,pptx',
-                'allowEmpty'=>false),
+            array('document','file','types'=>'doc,docx,odt,pdf,ppt,pptx,rar,zip',
+                'allowEmpty'=>true),
             array('title','length', 'max'=>250),
 
 		);
@@ -63,14 +63,17 @@ class Files extends CActiveRecord
     protected function beforeSave(){
         if(!parent::beforeSave())
             return false;
+
+        $this->id_article = Yii::app()->session['article'];
         if ($document=CUploadedFile::getInstance($this,'document')){
-            $this->id_article = Yii::app()->session['article'];
+            $this->deleteDocument();
             $this->filename = uniqid();
             $this->document=$document;
+            if (!$this->title) $this->title = $document;
             $this->document->saveAs(
-                Yii::getPathOfAlias('webroot.files').DIRECTORY_SEPARATOR.$this->filename);
+                Yii::getPathOfAlias('files').DIRECTORY_SEPARATOR.$this->filename);
         }
-        return true;
+        return $this->document ? true : false;
     }
 
 
@@ -82,10 +85,11 @@ class Files extends CActiveRecord
     }
 
     public function deleteDocument(){
-        $documentPath=Yii::getPathOfAlias('webroot.files').DIRECTORY_SEPARATOR.
-            $this->filename;
+
+        $documentPath=Yii::getPathOfAlias('files').DIRECTORY_SEPARATOR.$this->filename;
         if(is_file($documentPath))
             unlink($documentPath);
+
     }
 
 	/**

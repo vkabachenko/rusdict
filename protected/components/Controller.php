@@ -16,6 +16,7 @@ class Controller extends CController
 	public $menu=array();
     public $adminMenu=array();
 
+
     public function beforeAction($action) {
         Yii::app()->bootstrap->register();
         Yii::app()->getClientScript()->registerCssFile(Yii::app()->baseUrl.'/css/main.css');
@@ -23,16 +24,6 @@ class Controller extends CController
     }
 
 
-/*
-     *Добавление админ меню
-*/
-
-    public function addAdminMenu() {
-
-        if (!Yii::app()->user->isGuest) {
-            $this->layout = '//layouts/admin';
-        }
-    }
 
 /*
      *Добавление верхнего горизонтального меню

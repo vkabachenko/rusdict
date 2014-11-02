@@ -2681,3 +2681,492 @@ in /home/vvk/public_html/yiicms/index.php (13)
 2014/10/30 20:50:37 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
 in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (15)
 in /home/vvk/public_html/yiicms/index.php (13)
+2014/10/31 18:03:46 [error] [php] file_get_contents(/54527a6dc3b70): failed to open stream: No such file or directory (/home/vvk/public_html/yiicms/protected/controllers/FileController.php:32)
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#1 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(286): FileController->runAction()
+#4 /home/vvk/public_html/yiicms/framework/web/CController.php(265): FileController->runActionWithFilters()
+#5 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): FileController->run()
+#6 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home/vvk/public_html/yiicms/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiicms/file/download/4
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (32)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/10/31 18:06:22 [error] [php] file_get_contents(/54527a6dc3b70): failed to open stream: No such file or directory (/home/vvk/public_html/yiicms/protected/controllers/FileController.php:36)
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#1 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(286): FileController->runAction()
+#4 /home/vvk/public_html/yiicms/framework/web/CController.php(265): FileController->runActionWithFilters()
+#5 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): FileController->run()
+#6 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home/vvk/public_html/yiicms/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiicms/file/download/4
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (36)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/10/31 18:25:49 [error] [php] file_get_contents(/home/vvk/public_html/yiicms/protected/config/files/54527a6dc3b70): failed to open stream: No such file or directory (/home/vvk/public_html/yiicms/protected/controllers/FileController.php:35)
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#1 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(286): FileController->runAction()
+#4 /home/vvk/public_html/yiicms/framework/web/CController.php(265): FileController->runActionWithFilters()
+#5 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): FileController->run()
+#6 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /home/vvk/public_html/yiicms/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiicms/file/download/4
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (35)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/10/31 19:34:30 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (16)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/10/31 21:15:39 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'url' in 'order clause'. Выполнявшийся SQL-запрос: SELECT * FROM `dct_files` `t` WHERE id_article = 9 ORDER BY url LIMIT 10.
+in /home/vvk/public_html/yiicms/protected/views/file/admin.php (46)
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (92)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/10/31 21:15:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'url' in 'order clause'. The SQL statement executed was: SELECT * FROM `dct_files` `t` WHERE id_article = 9 ORDER BY url LIMIT 10' in /home/vvk/public_html/yiicms/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/vvk/public_html/yiicms/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 /home/vvk/public_html/yiicms/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /home/vvk/public_html/yiicms/framework/web/CActiveDataProvider.php(199): CActiveRecord->findAll(Object(CDbCriteria))
+#4 /home/vvk/public_html/yiicms/framework/web/CDataProvider.php(168): CActiveDataProvider->fetchData()
+#5 /home/vvk/public_html/yiicms/framework/zii/widgets/CBaseListView.php(111): CDataProvider->getData()
+#6 /home/vvk/public_html/yiicms/framework/zii/widgets/grid/CGridView.php(339): CBaseListView->init()
+#7 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(147): CGridView->init()
+#8 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(172): CBaseController->createWidget('zii.widgets.gri...', Array)
+#9 /home/vvk/public_html/yiicms/protected/views/file/admin.php(46): CBaseController->widget('zii.widgets.gri...', Array)
+#10 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require('/home/vvk/publi...')
+#11 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/vvk/publi...', Array, true)
+#12 /home/vvk/public_html/yiicms/framework/web/CController.php(869): CBaseController->renderFile('/home/vvk/publi...', Array, true)
+#13 /home/vvk/public_html/yiicms/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#14 /home/vvk/public_html/yiicms/protected/controllers/FileController.php(92): CController->render('admin', Array)
+#15 [internal function]: FileController->actionIndex('9')
+#16 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#17 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FileController), Object(ReflectionMethod), Array)
+#18 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /home/vvk/public_html/yiicms/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#20 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('index')
+#22 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('file/index')
+#23 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/yiicms/file/index/9
+HTTP_REFERER=http://test.org/yiicms/article/edit/9
+---
+2014/11/01 11:47:57 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in /home/vvk/public_html/yiicms/framework/web/CController.php:1132
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#1 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('file/update')
+#10 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiicms/file/update/0?_=1414831628637
+HTTP_REFERER=http://test.org/yiicms/file/index/9
+---
+2014/11/01 12:04:39 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in /home/vvk/public_html/yiicms/framework/web/CController.php:1132
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#1 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('file/update')
+#10 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiicms/file/update/0?_=1414832591793
+HTTP_REFERER=http://test.org/yiicms/file/index/9
+---
+2014/11/01 12:09:35 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in /home/vvk/public_html/yiicms/framework/web/CController.php:1132
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAjaxOnly(Object(CFilterChain))
+#1 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('file/update')
+#10 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiicms/file/update/4
+HTTP_REFERER=http://test.org/yiicms/file/index/9
+---
+2014/11/01 12:15:06 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/01 12:35:57 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/01 12:35:57 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/01 12:39:59 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/01 12:41:52 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/01 12:44:00 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/01 12:58:02 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/01 12:59:54 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/01 13:03:21 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/01 13:03:21 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::execute(): SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`yiicms`.`dct_files`, CONSTRAINT `dct_files_ibfk_1` FOREIGN KEY (`id_article`) REFERENCES `dct_articles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). Выполнявшийся SQL-запрос: INSERT INTO `dct_files` (`document`, `title`) VALUES (:yp0, :yp1).
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (139)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/01 13:03:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`yiicms`.`dct_files`, CONSTRAINT `dct_files_ibfk_1` FOREIGN KEY (`id_article`) REFERENCES `dct_articles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `dct_files` (`document`, `title`) VALUES (:yp0, :yp1)' in /home/vvk/public_html/yiicms/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /home/vvk/public_html/yiicms/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /home/vvk/public_html/yiicms/protected/controllers/FileController.php(139): CActiveRecord->save()
+#3 [internal function]: FileController->actionUpdate('0')
+#4 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#5 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FileController), Object(ReflectionMethod), Array)
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('update')
+#15 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('file/update')
+#16 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiicms/file/update/0
+HTTP_REFERER=http://test.org/yiicms/file/index/9
+---
+2014/11/01 21:42:44 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in /home/vvk/public_html/yiicms/framework/web/CController.php:336
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('index')
+#9 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('file/index/"/yi...')
+#10 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiicms/file/index/%22/yiicms/file/update/0%22
+HTTP_REFERER=http://test.org/yiicms/file/index/9
+---
+2014/11/01 21:47:26 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in /home/vvk/public_html/yiicms/framework/web/CController.php:336
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('index')
+#9 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('file/index/"/yi...')
+#10 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiicms/file/index/%22/yiicms/file/update/0%22
+HTTP_REFERER=http://test.org/yiicms/file/index/9
+---
+2014/11/01 21:50:17 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Некорректный запрос.' in /home/vvk/public_html/yiicms/framework/web/CController.php:336
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('index')
+#9 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('file/index/"htt...')
+#10 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiicms/file/index/%22http://test.org/yiicms/file/update/0%22
+HTTP_REFERER=http://test.org/yiicms/file/index/9
+---
+2014/11/01 21:54:39 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 10:15:39 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 10:16:29 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 10:17:07 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 10:27:27 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 10:28:13 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 10:28:45 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 10:29:45 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 10:31:14 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 10:31:20 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 10:32:18 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 10:33:58 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (137)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 10:56:14 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CActiveForm.footer".' in /home/vvk/public_html/yiicms/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWidgetFactory.php(161): CComponent->__set('footer', Array)
+#1 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(FileController), 'CActiveForm', Array)
+#2 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(189): CBaseController->createWidget('CActiveForm', Array)
+#3 /home/vvk/public_html/yiicms/protected/views/file/upload.php(17): CBaseController->beginWidget('CActiveForm', Array)
+#4 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require('/home/vvk/publi...')
+#5 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/vvk/publi...', Array, true)
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(869): CBaseController->renderFile('/home/vvk/publi...', Array, true)
+#7 /home/vvk/public_html/yiicms/protected/controllers/FileController.php(145): CController->renderPartial('upload', Array, false, true)
+#8 [internal function]: FileController->actionUpdate('0')
+#9 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#10 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FileController), Object(ReflectionMethod), Array)
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('update')
+#20 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('file/update')
+#21 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiicms/file/update/0?_=1414914974906
+HTTP_REFERER=http://test.org/yiicms/file/index/9
+---
+2014/11/02 10:56:19 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CActiveForm.footer".' in /home/vvk/public_html/yiicms/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWidgetFactory.php(161): CComponent->__set('footer', Array)
+#1 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(FileController), 'CActiveForm', Array)
+#2 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(189): CBaseController->createWidget('CActiveForm', Array)
+#3 /home/vvk/public_html/yiicms/protected/views/file/upload.php(17): CBaseController->beginWidget('CActiveForm', Array)
+#4 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require('/home/vvk/publi...')
+#5 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/vvk/publi...', Array, true)
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(869): CBaseController->renderFile('/home/vvk/publi...', Array, true)
+#7 /home/vvk/public_html/yiicms/protected/controllers/FileController.php(145): CController->renderPartial('upload', Array, false, true)
+#8 [internal function]: FileController->actionUpdate('0')
+#9 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#10 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FileController), Object(ReflectionMethod), Array)
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('update')
+#20 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('file/update')
+#21 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiicms/file/update/0?_=1414914979922
+HTTP_REFERER=http://test.org/yiicms/file/index/9
+---
+2014/11/02 10:56:22 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CActiveForm.footer".' in /home/vvk/public_html/yiicms/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWidgetFactory.php(161): CComponent->__set('footer', Array)
+#1 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(FileController), 'CActiveForm', Array)
+#2 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(189): CBaseController->createWidget('CActiveForm', Array)
+#3 /home/vvk/public_html/yiicms/protected/views/file/upload.php(17): CBaseController->beginWidget('CActiveForm', Array)
+#4 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require('/home/vvk/publi...')
+#5 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/vvk/publi...', Array, true)
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(869): CBaseController->renderFile('/home/vvk/publi...', Array, true)
+#7 /home/vvk/public_html/yiicms/protected/controllers/FileController.php(145): CController->renderPartial('upload', Array, false, true)
+#8 [internal function]: FileController->actionUpdate('0')
+#9 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#10 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FileController), Object(ReflectionMethod), Array)
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('update')
+#20 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('file/update')
+#21 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiicms/file/update/0?_=1414914982033
+HTTP_REFERER=http://test.org/yiicms/file/index/9
+---
+2014/11/02 10:56:36 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CActiveForm.footer".' in /home/vvk/public_html/yiicms/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWidgetFactory.php(161): CComponent->__set('footer', Array)
+#1 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(FileController), 'CActiveForm', Array)
+#2 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(189): CBaseController->createWidget('CActiveForm', Array)
+#3 /home/vvk/public_html/yiicms/protected/views/file/upload.php(17): CBaseController->beginWidget('CActiveForm', Array)
+#4 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require('/home/vvk/publi...')
+#5 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/vvk/publi...', Array, true)
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(869): CBaseController->renderFile('/home/vvk/publi...', Array, true)
+#7 /home/vvk/public_html/yiicms/protected/controllers/FileController.php(145): CController->renderPartial('upload', Array, false, true)
+#8 [internal function]: FileController->actionUpdate('5')
+#9 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#10 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FileController), Object(ReflectionMethod), Array)
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('update')
+#20 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('file/update')
+#21 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiicms/file/update/5
+HTTP_REFERER=http://test.org/yiicms/file/index/9
+---
+2014/11/02 11:00:43 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CActiveDataProvider.isNewRecord".' in /home/vvk/public_html/yiicms/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/vvk/public_html/yiicms/protected/views/file/admin.php(17): CComponent->__get('isNewRecord')
+#1 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require('/home/vvk/publi...')
+#2 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/vvk/publi...', Array, true)
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(869): CBaseController->renderFile('/home/vvk/publi...', Array, true)
+#4 /home/vvk/public_html/yiicms/framework/web/CController.php(782): CController->renderPartial('admin', Array, true)
+#5 /home/vvk/public_html/yiicms/protected/controllers/FileController.php(119): CController->render('admin', Array)
+#6 [internal function]: FileController->actionIndex('9')
+#7 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FileController), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FileController), Object(ReflectionMethod), Array)
+#9 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#16 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('index')
+#18 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('file/index')
+#19 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#20 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yiicms/file/index/9
+HTTP_REFERER=http://test.org/yiicms/article/edit/9
+---
+2014/11/02 11:04:40 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (138)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 11:05:53 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (138)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 11:14:26 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (138)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 11:14:42 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (138)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 11:15:12 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (138)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 11:15:38 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (138)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 11:16:56 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (138)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 11:29:33 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (108)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 11:30:01 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (108)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 11:55:22 [error] [system.db.CDbCommand] Не удалось выполнить CDbCommand::fetchAll(): SQLSTATE[42S22]: Column not found: 1054 Unknown column '$id' in 'where clause'. Выполнявшийся SQL-запрос: SELECT * FROM `dct_files` `t` WHERE id_article = $id ORDER BY title.
+in /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php (204)
+in /home/vvk/public_html/yiicms/protected/views/article/article.php (48)
+in /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php (75)
+2014/11/02 11:55:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand не удалось исполнить SQL-запрос: SQLSTATE[42S22]: Column not found: 1054 Unknown column '$id' in 'where clause'. The SQL statement executed was: SELECT * FROM `dct_files` `t` WHERE id_article = $id ORDER BY title' in /home/vvk/public_html/yiicms/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/vvk/public_html/yiicms/framework/db/ar/CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 /home/vvk/public_html/yiicms/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(204): CActiveRecord->findAll(Array)
+#4 /home/vvk/public_html/yiicms/protected/views/article/article.php(48): ArticleController->articleFiles('9')
+#5 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require('/home/vvk/publi...')
+#6 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/vvk/publi...', Array, true)
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(869): CBaseController->renderFile('/home/vvk/publi...', Array, true)
+#8 /home/vvk/public_html/yiicms/framework/web/CController.php(782): CController->renderPartial('article', Array, true)
+#9 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(75): CController->render('article', Array)
+#10 [internal function]: ArticleController->actionArticle('9')
+#11 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#12 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#13 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('article')
+#22 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('article/article')
+#23 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/yiicms/article/article/9
+HTTP_REFERER=http://test.org/yiicms/article/list/%D0%91
+---
+2014/11/02 12:02:46 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (108)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 12:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
+in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (108)
+in /home/vvk/public_html/yiicms/index.php (13)

@@ -6,7 +6,8 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 
-//Yii::setPathOfAlias('bootstrap',dirname(__FILE__).'/../extensions/bootstrap');
+Yii::setPathOfAlias('bootstrap',dirname(__FILE__).'/../extensions/bootstrap');
+Yii::setPathOfAlias('files',dirname(__FILE__).'/../../files');
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
@@ -16,7 +17,7 @@ return array(
 	'preload'=>array('log'),
     // path aliases
     'aliases' => array(
-     'bootstrap' => realpath(__DIR__ . '/../extensions/bootstrap'),
+//     'bootstrap' => realpath(__DIR__ . '/../extensions/bootstrap'),
    ),
 
 	// autoloading model and component classes
@@ -101,7 +102,7 @@ return array(
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
-		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+
+        'fileDir'=>Yii::getPathOfAlias('webroot.files').DIRECTORY_SEPARATOR,
 	),
 );

@@ -91,7 +91,8 @@ class ArticleController extends Controller
                 array('label'=>'Ссылки',
                 'url'=>$this->createUrl('link/index',array('id'=>$id)),),
                 array('label'=>'Материал',
-                    'url'=>$this->createUrl('file/update',array('id_article'=>$id)),),
+                    'url'=>$this->createUrl('file/index',array('id'=>$id)),),
+
              );
         }
 
@@ -179,6 +180,38 @@ class ArticleController extends Controller
             return $allLinks;
     }
 
+
+    /*
+     * Есть ли файлы для данной статьи
+     */
+    public function hasFiles($id) {
+
+        return Files::model()->find("id_article = $id");
+
+    }
+
+    /*
+     * Получить все файлы для данной статьи в виде массива
+     * label=>Название, url=>Адрес
+     */
+
+    public function articleFiles($id) {
+
+        $allFiles = array();
+
+        $files = Files::model()->findAll(array(
+            'condition'=>"id_article = $id",
+            'order'=>'title',));
+
+        foreach ($files as $file) {
+
+            $allFiles[] = array('label'=>$file->title,
+                'url'=>$this->createUrl('file/download',array('id'=>$file->id)));
+
+        }
+
+        return $allFiles;
+    }
 
 }
 ?>
