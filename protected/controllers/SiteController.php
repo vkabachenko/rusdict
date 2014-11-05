@@ -11,6 +11,7 @@ class SiteController extends Controller
     public function filters() {
         return array(
           'accessControl',
+          'ajaxOnly + autocomplete'
         );
     }
 
@@ -21,7 +22,7 @@ class SiteController extends Controller
     {
         return array(
             array('allow',  // allow all users to access 'index' and 'view' actions.
-                'actions'=>array('index','login','error'),
+                'actions'=>array('index','login','error','autocomplete'),
                 'users'=>array('*'),
             ),
             array('allow', // allow authenticated users to access all actions
@@ -91,6 +92,36 @@ class SiteController extends Controller
         Yii::app()->user->logout();
         $this->redirect(Yii::app()->homeUrl);
     }
+
+/*
+ * Автозаполнение поиска (AJAX)
+ */
+    public function actionAutocomplete() {
+
+        $input = trim($_GET['term']);
+        $input = mb_strtolower($input,'utf-8');
+
+        $criteria = new CDbCriteria();
+        $criteria->condition = "term LIKE '$input%'";
+        $criteria->select = 'term';
+        $criteria->order = 'term';
+        $criteria->distinct = true;
+        $criteria->limit = 8;
+
+        $terms = Terms::model()->findAll($criteria);
+
+        $data = array();
+        foreach($terms as $term) {
+           $data[]=$term->term;
+        }
+
+        echo CJSON::encode($data);
+        Yii::app()->end();
+
+    }
+
+
+
 
 
 	/**

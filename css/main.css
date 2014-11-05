@@ -41,3 +41,13 @@ body
     padding:10px 0;
     margin-bottom: 10px;
 }
+
+#find {
+    margin-bottom: 10px;
+    text-align:center;
+}
+
+#find a {
+    background: url("../images/Find.gif") no-repeat;
+    padding-left: 20px;
+}

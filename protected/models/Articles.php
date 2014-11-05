@@ -52,6 +52,7 @@ class Articles extends CActiveRecord
 			'idLetter' => array(self::BELONGS_TO, 'Letters', 'id_letter'),
             'idSection' => array(self::BELONGS_TO, 'Sections', 'id_section'),
             'files' => array(self::HAS_MANY, 'Files', 'id_article'),
+            'terms' => array(self::HAS_MANY, 'Terms', 'id_article'),
 		);
 	}
 
@@ -68,14 +69,51 @@ class Articles extends CActiveRecord
 		);
 	}
 
+    protected function beforeSave(){
+        if(!parent::beforeSave())
+            return false;
+
+        // удаление всех терминов, связанных с данной статьей
+        Terms::model()->deleteAllByAttributes(array('id_article'=>$this->id));
+
+        $this->fillTerms();
+
+        return true;
+    }
+
 
     /*
-     * Правила валидации
+     * Заполнение таблицы Terms для данной статьи
      */
+    public function fillTerms() {
+
+        // добавление термина из заголовка статьи
+        $record = new Terms();
+        $record->id_article = $this->id;
+        $record->term = $this->delAccent($this->title);
+        $record->save();
+
+        // добавление терминов из списка терминов статьи
+        $terms = explode(',',$this->terms);
+        foreach($terms as $term) {
+            $term = trim($term);
+            if ($term) {
+                $record = new Terms();
+                $record->id_article = $this->id;
+                $record->term = $this->delAccent($term);
+                $record->save();
+            }
+        }
+
+    }
+
+        /*
+         * Правила валидации
+         */
 
     public function checkFirstLetter($attr,$params) {
 
-        $letter = Articles::mb_firstLetter($this->title);
+        $letter = Utf8::mb_firstLetter($this->title);
         if ($letter < 'А' || $letter > 'Я') {
             $this->addError('title',
                 'Первым символом должна быть буква кириллицы');
@@ -83,35 +121,23 @@ class Articles extends CActiveRecord
     }
 
 
-
     /*
-     * Первая буква в строке (с учетом многобайтовой кодировки)
+     * Преобразование к нижнему регистру и удаление знака ударения
      */
+    public function delAccent($str) {
 
-    public static function mb_firstLetter($str, $encoding = 'utf-8') {
-        if($encoding === NULL)
-        {
-            $encoding    = mb_internal_encoding();
+        $str = mb_strtolower($str,'utf-8');
+
+        $accent = Utf8::codeToUtf8(769); // знак ударения
+        $pattern = array('á','é','ó','ό',$accent);
+        $replacement = array('а','е','о','о','');
+
+        for ($i=0; $i<sizeof($pattern); $i++) {
+            $str = mb_ereg_replace($pattern[$i], $replacement[$i], $str);
         }
 
-        return mb_substr(mb_strtoupper($str, $encoding), 0, 1, $encoding);
-
+        return $str;
     }
-
-    /*
-     * Заменить первую букву на заглавную
-     */
-
-    public static function mb_ucfirst($str, $encoding = 'utf-8')
-    {
-        if($encoding === NULL)
-        {
-            $encoding    = mb_internal_encoding();
-        }
-
-        return Articles::mb_firstLetter($str) . mb_substr($str, 1, mb_strlen($str)-1, $encoding);
-    }
-
 
 
 	/**

@@ -1,13 +1,24 @@
+<div id="find">
+
 <?php
-echo CHtml::beginForm('site/search');
 
-$controller = $this->getController();
-$controller->widget('zii.widgets.jui.CJuiAutoComplete', array(
-'name'=>'terms',
-'htmlOptions'=>array('class'=>'span2',),
-'source'=>array('ac1', 'ac2', 'ac3'),
+echo CHtml::link('Найти','#',array('data-toggle'=>'modal','data-target'=>'#findModalForm'));
+
+?>
+
+</div>
+
+<?php
+$this->getController()->widget('bootstrap.widgets.TbModal', array(
+    'id' => 'findModalForm',
+    'header' => 'Поиск',
+    'content' => $this->getController()->renderPartial('//site/find',array(),true),
+    'footer' => array(
+        TbHtml::button('Найти',
+            array( 'color' => TbHtml::BUTTON_COLOR_PRIMARY,
+                   'onclick'=>'$("#searchForm").submit()'
+                )),
+        TbHtml::button('Закрыть', array('data-dismiss' => 'modal')),
+    ),
 ));
-
-echo CHtml::submitButton('Поиск');
-echo CHtml::endForm();
 ?>

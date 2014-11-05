@@ -15,7 +15,7 @@ class ArticleController extends Controller
     {
         return array(
             array('allow',  // allow all users to access 'index' and 'view' actions.
-                'actions'=>array('list','article'),
+                'actions'=>array('list','article','search'),
                 'users'=>array('*'),
             ),
             array('allow', // allow authenticated users to access all actions
@@ -27,7 +27,9 @@ class ArticleController extends Controller
         );
     }
 
-
+/*
+ * Список заголовков для данной буквы
+ */
 
 
     public function actionList($id) {
@@ -51,7 +53,14 @@ class ArticleController extends Controller
         }
         $titles = Articles::model()->findAll($criteria);
 
-        $this->render('list',array('titles'=>$titles,'letter'=>$id));
+        $navList = array();
+        foreach($titles as $title) {
+            $navList[] = array('label'=>$title->title,
+                'url'=>$this->createUrl('article',array('id'=>$title->id)));
+        }
+
+
+        $this->render('list',array('navList'=>$navList));
     }
 
     /*
@@ -71,8 +80,10 @@ class ArticleController extends Controller
             );
         }
 
+
         $model = Articles::model()->findByPk($id);
-        $this->render('article',array('model'=>$model));
+
+            $this->render('article',array('model'=>$model));
 
     }
 
@@ -117,7 +128,7 @@ class ArticleController extends Controller
             $model->attributes=$_POST['Articles'];
 
             // первая буква заголовка
-            $letter = Articles::mb_firstLetter($model->title);
+            $letter = Utf8::mb_firstLetter($model->title);
 
             // если этой буквы еще нет в таблице Letters, добавляем
             if (!Letters::model()->findByPk($letter)) {
@@ -128,7 +139,8 @@ class ArticleController extends Controller
 
             // заменяем первую букву в модели
             $model->id_letter = $letter;
-            $model->title = Articles::mb_ucfirst($model->title);
+
+            $model->title = CHtml::encode(Utf8::mb_ucfirst($model->title));
 
 
             if($model->save())
@@ -146,6 +158,33 @@ class ArticleController extends Controller
             $model->delete();
 
             $this->redirect(array('list','id'=>$id_letter));
+    }
+
+/*
+ * Поиск статьи по заданной строке ввода
+ * передается в $_POST['searchString']
+ */
+    public function actionSearch() {
+
+        $this->listLetters();
+
+        $searchString = trim($_POST['searchString']);
+
+        $navList = array();
+
+        if ($searchString) { // передана непустая строка
+
+             $terms =   Terms::model()->
+                with(array('idArticle'=>array('order'=>'idArticle.title')))->
+                findAllByAttributes(array('term'=>$searchString));
+
+            foreach($terms as $term) {
+                $navList[] = array('label'=>$term->idArticle->title,
+                'url'=>$this->createUrl('article',array('id'=>$term->id_article)));
+            }
+        }
+
+        $this->render('list',array('navList'=>$navList));
     }
 
 

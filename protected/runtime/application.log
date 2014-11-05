@@ -3170,3 +3170,694 @@ in /home/vvk/public_html/yiicms/index.php (13)
 2014/11/02 12:03:31 [warning] [application] Не удалось присвоить небезопасный атрибут "document" класса "Files".
 in /home/vvk/public_html/yiicms/protected/controllers/FileController.php (108)
 in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/02 17:54:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('images/find.gif')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/images/find.gif
+HTTP_REFERER=http://test.org/yiicms/css/main.css
+---
+2014/11/02 17:55:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('css/images/find...')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/css/images/find.gif
+HTTP_REFERER=http://test.org/yiicms/css/main.css
+---
+2014/11/02 17:56:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('css/images/find...')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/css/images/find.gif
+HTTP_REFERER=http://test.org/yiicms/css/main.css
+---
+2014/11/02 17:56:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('css/images/find...')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/css/images/find.gif
+---
+2014/11/02 17:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/.images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('css/.images/fin...')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/css/.images/find.gif
+HTTP_REFERER=http://test.org/yiicms/css/main.css
+---
+2014/11/02 17:57:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "css/..images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('css/..images/fi...')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/css/..images/find.gif
+HTTP_REFERER=http://test.org/yiicms/css/main.css
+---
+2014/11/02 17:57:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('images/find.gif')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/images/find.gif
+HTTP_REFERER=http://test.org/yiicms/css/main.css
+---
+2014/11/02 17:57:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('images/find.gif')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/images/find.gif
+---
+2014/11/02 17:57:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('images/find.gif')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/images/find.gif
+---
+2014/11/02 18:01:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('images/find.gif')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/images/find.gif
+HTTP_REFERER=http://test.org/yiicms/css/main.css
+---
+2014/11/02 18:01:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('images/find.gif')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/images/find.gif
+---
+2014/11/02 18:02:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('images/find.gif')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/images/find.gif
+---
+2014/11/02 18:03:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('images/find.gif')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/images/find.gif
+HTTP_REFERER=http://test.org/yiicms/css/main.css
+---
+2014/11/02 18:03:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('images/find.gif')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/images/find.gif
+---
+2014/11/02 18:03:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('images/find.gif')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/images/find.gif
+---
+2014/11/02 18:14:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('images/find.gif')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/images/find.gif
+HTTP_REFERER=http://test.org/yiicms/css/main.css
+---
+2014/11/02 18:14:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Невозможно обработать запрос "images/find.gif".' in /home/vvk/public_html/yiicms/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('images/find.gif')
+#1 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yiicms/images/find.gif
+---
+2014/11/02 19:41:12 [error] [exception.CException] exception 'CException' with message 'В классе SiteController и его поведениях не найден метод или замыкание с именем "getController".' in /home/vvk/public_html/yiicms/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/vvk/public_html/yiicms/protected/views/site/find.php(4): CComponent->__call('getController', Array)
+#1 /home/vvk/public_html/yiicms/protected/views/site/find.php(4): SiteController->getController()
+#2 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require('/home/vvk/publi...')
+#3 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/vvk/publi...', Array, true)
+#4 /home/vvk/public_html/yiicms/framework/web/CController.php(869): CBaseController->renderFile('/home/vvk/publi...', Array, true)
+#5 /home/vvk/public_html/yiicms/protected/components/views/findForm.php(15): CController->renderPartial('//site/find', Array, true)
+#6 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(130): require('/home/vvk/publi...')
+#7 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/vvk/publi...', NULL, false)
+#8 /home/vvk/public_html/yiicms/framework/web/widgets/CWidget.php(244): CBaseController->renderFile('/home/vvk/publi...', NULL, false)
+#9 /home/vvk/public_html/yiicms/protected/components/FindForm.php(11): CWidget->render('findForm')
+#10 /home/vvk/public_html/yiicms/framework/zii/widgets/CPortlet.php(97): FindForm->renderContent()
+#11 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(173): CPortlet->run()
+#12 /home/vvk/public_html/yiicms/protected/views/layouts/main.php(72): CBaseController->widget('FindForm')
+#13 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require('/home/vvk/publi...')
+#14 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/vvk/publi...', Array, true)
+#15 /home/vvk/public_html/yiicms/framework/web/CController.php(784): CBaseController->renderFile('/home/vvk/publi...', Array, true)
+#16 /home/vvk/public_html/yiicms/protected/controllers/SiteController.php(58): CController->render('index')
+#17 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#18 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#21 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#25 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('')
+#27 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#28 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#29 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/yiicms/
+---
+2014/11/02 19:41:47 [error] [php] Object of class CJuiAutoComplete could not be converted to string (/home/vvk/public_html/yiicms/protected/views/site/find.php:7)
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CController.php(869): SiteController->renderFile()
+#1 /home/vvk/public_html/yiicms/protected/components/views/findForm.php(15): SiteController->renderPartial()
+#2 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(130): require()
+#3 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): FindForm->renderInternal()
+#4 /home/vvk/public_html/yiicms/framework/web/widgets/CWidget.php(244): FindForm->renderFile()
+#5 /home/vvk/public_html/yiicms/protected/components/FindForm.php(11): FindForm->render()
+#6 /home/vvk/public_html/yiicms/framework/zii/widgets/CPortlet.php(97): FindForm->renderContent()
+#7 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(173): FindForm->run()
+#8 /home/vvk/public_html/yiicms/protected/views/layouts/main.php(72): SiteController->widget()
+#9 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require()
+#10 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(784): SiteController->renderFile()
+#12 /home/vvk/public_html/yiicms/protected/controllers/SiteController.php(58): SiteController->render()
+#13 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#14 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams()
+#15 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#16 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#17 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#18 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#19 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#20 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#21 /home/vvk/public_html/yiicms/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#22 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): SiteController->run()
+#23 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#24 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#25 /home/vvk/public_html/yiicms/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiicms/
+in /home/vvk/public_html/yiicms/protected/views/site/find.php (7)
+in /home/vvk/public_html/yiicms/protected/components/views/findForm.php (15)
+in /home/vvk/public_html/yiicms/protected/components/FindForm.php (11)
+2014/11/02 19:46:06 [error] [exception.CException] exception 'CException' with message 'В классе CJuiAutoComplete должны быть заданы значения свойств "model" и "attribute", либо значение "name".' in /home/vvk/public_html/yiicms/framework/zii/widgets/jui/CJuiInputWidget.php:59
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/zii/widgets/jui/CJuiAutoComplete.php(75): CJuiInputWidget->resolveNameID()
+#1 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(173): CJuiAutoComplete->run()
+#2 /home/vvk/public_html/yiicms/protected/views/site/find.php(7): CBaseController->widget('zii.widgets.jui...', Array)
+#3 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require('/home/vvk/publi...')
+#4 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/vvk/publi...', Array, true)
+#5 /home/vvk/public_html/yiicms/framework/web/CController.php(869): CBaseController->renderFile('/home/vvk/publi...', Array, true)
+#6 /home/vvk/public_html/yiicms/protected/components/views/findForm.php(15): CController->renderPartial('//site/find', Array, true)
+#7 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(130): require('/home/vvk/publi...')
+#8 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/vvk/publi...', NULL, false)
+#9 /home/vvk/public_html/yiicms/framework/web/widgets/CWidget.php(244): CBaseController->renderFile('/home/vvk/publi...', NULL, false)
+#10 /home/vvk/public_html/yiicms/protected/components/FindForm.php(11): CWidget->render('findForm')
+#11 /home/vvk/public_html/yiicms/framework/zii/widgets/CPortlet.php(97): FindForm->renderContent()
+#12 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(173): CPortlet->run()
+#13 /home/vvk/public_html/yiicms/protected/views/layouts/main.php(72): CBaseController->widget('FindForm')
+#14 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require('/home/vvk/publi...')
+#15 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/vvk/publi...', Array, true)
+#16 /home/vvk/public_html/yiicms/framework/web/CController.php(784): CBaseController->renderFile('/home/vvk/publi...', Array, true)
+#17 /home/vvk/public_html/yiicms/protected/controllers/SiteController.php(58): CController->render('index')
+#18 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#19 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#20 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#22 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#26 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('')
+#28 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#29 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#30 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/yiicms/
+---
+2014/11/03 18:15:34 [error] [exception.CException] exception 'CException' with message 'В классе Articles и его поведениях не найден метод или замыкание с именем "mb_firstLetter".' in /home/vvk/public_html/yiicms/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/db/ar/CActiveRecord.php(227): CComponent->__call('mb_firstLetter', Array)
+#1 /home/vvk/public_html/yiicms/protected/models/Articles.php(86): CActiveRecord->__call('mb_firstLetter', Array)
+#2 /home/vvk/public_html/yiicms/protected/models/Articles.php(86): Articles->mb_firstLetter('????????')
+#3 /home/vvk/public_html/yiicms/framework/validators/CInlineValidator.php(42): Articles->checkFirstLetter('title', Array)
+#4 /home/vvk/public_html/yiicms/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(Articles), 'title')
+#5 /home/vvk/public_html/yiicms/framework/base/CModel.php(159): CValidator->validate(Object(Articles), NULL)
+#6 /home/vvk/public_html/yiicms/framework/web/widgets/CActiveForm.php(920): CModel->validate(NULL)
+#7 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(118): CActiveForm::validate(Object(Articles))
+#8 [internal function]: ArticleController->actionEdit('11')
+#9 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#10 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('edit')
+#20 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('article/edit')
+#21 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiicms/article/edit/11
+HTTP_REFERER=http://test.org/yiicms/article/edit/11
+---
+2014/11/03 18:15:49 [error] [exception.CException] exception 'CException' with message 'В классе Articles и его поведениях не найден метод или замыкание с именем "mb_firstLetter".' in /home/vvk/public_html/yiicms/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/db/ar/CActiveRecord.php(227): CComponent->__call('mb_firstLetter', Array)
+#1 /home/vvk/public_html/yiicms/protected/models/Articles.php(86): CActiveRecord->__call('mb_firstLetter', Array)
+#2 /home/vvk/public_html/yiicms/protected/models/Articles.php(86): Articles->mb_firstLetter('????????')
+#3 /home/vvk/public_html/yiicms/framework/validators/CInlineValidator.php(42): Articles->checkFirstLetter('title', Array)
+#4 /home/vvk/public_html/yiicms/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(Articles), 'title')
+#5 /home/vvk/public_html/yiicms/framework/base/CModel.php(159): CValidator->validate(Object(Articles), NULL)
+#6 /home/vvk/public_html/yiicms/framework/web/widgets/CActiveForm.php(920): CModel->validate(NULL)
+#7 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(118): CActiveForm::validate(Object(Articles))
+#8 [internal function]: ArticleController->actionEdit('11')
+#9 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#10 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('edit')
+#20 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('article/edit')
+#21 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiicms/article/edit/11
+HTTP_REFERER=http://test.org/yiicms/article/edit/11
+---
+2014/11/03 18:16:29 [error] [exception.CException] exception 'CException' with message 'В классе Articles и его поведениях не найден метод или замыкание с именем "mb_firstLetter".' in /home/vvk/public_html/yiicms/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/db/ar/CActiveRecord.php(227): CComponent->__call('mb_firstLetter', Array)
+#1 /home/vvk/public_html/yiicms/protected/models/Articles.php(86): CActiveRecord->__call('mb_firstLetter', Array)
+#2 /home/vvk/public_html/yiicms/protected/models/Articles.php(86): Articles->mb_firstLetter('????????1')
+#3 /home/vvk/public_html/yiicms/framework/validators/CInlineValidator.php(42): Articles->checkFirstLetter('title', Array)
+#4 /home/vvk/public_html/yiicms/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(Articles), 'title')
+#5 /home/vvk/public_html/yiicms/framework/base/CModel.php(159): CValidator->validate(Object(Articles), NULL)
+#6 /home/vvk/public_html/yiicms/framework/web/widgets/CActiveForm.php(920): CModel->validate(NULL)
+#7 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(118): CActiveForm::validate(Object(Articles))
+#8 [internal function]: ArticleController->actionEdit('11')
+#9 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#10 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('edit')
+#20 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('article/edit')
+#21 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiicms/article/edit/11
+HTTP_REFERER=http://test.org/yiicms/article/edit/11
+---
+2014/11/03 18:19:32 [error] [exception.CException] exception 'CException' with message 'В классе Articles и его поведениях не найден метод или замыкание с именем "mb_firstLetter".' in /home/vvk/public_html/yiicms/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/db/ar/CActiveRecord.php(227): CComponent->__call('mb_firstLetter', Array)
+#1 /home/vvk/public_html/yiicms/protected/models/Articles.php(86): CActiveRecord->__call('mb_firstLetter', Array)
+#2 /home/vvk/public_html/yiicms/protected/models/Articles.php(86): Articles->mb_firstLetter('????????')
+#3 /home/vvk/public_html/yiicms/framework/validators/CInlineValidator.php(42): Articles->checkFirstLetter('title', Array)
+#4 /home/vvk/public_html/yiicms/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(Articles), 'title')
+#5 /home/vvk/public_html/yiicms/framework/base/CModel.php(159): CValidator->validate(Object(Articles), NULL)
+#6 /home/vvk/public_html/yiicms/framework/web/widgets/CActiveForm.php(920): CModel->validate(NULL)
+#7 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(118): CActiveForm::validate(Object(Articles))
+#8 [internal function]: ArticleController->actionEdit('11')
+#9 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#10 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('edit')
+#20 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('article/edit')
+#21 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiicms/article/edit/11
+HTTP_REFERER=http://test.org/yiicms/article/edit/11
+---
+2014/11/03 18:19:34 [error] [exception.CException] exception 'CException' with message 'В классе Articles и его поведениях не найден метод или замыкание с именем "mb_firstLetter".' in /home/vvk/public_html/yiicms/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/db/ar/CActiveRecord.php(227): CComponent->__call('mb_firstLetter', Array)
+#1 /home/vvk/public_html/yiicms/protected/models/Articles.php(86): CActiveRecord->__call('mb_firstLetter', Array)
+#2 /home/vvk/public_html/yiicms/protected/models/Articles.php(86): Articles->mb_firstLetter('????????')
+#3 /home/vvk/public_html/yiicms/framework/validators/CInlineValidator.php(42): Articles->checkFirstLetter('title', Array)
+#4 /home/vvk/public_html/yiicms/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute(Object(Articles), 'title')
+#5 /home/vvk/public_html/yiicms/framework/base/CModel.php(159): CValidator->validate(Object(Articles), NULL)
+#6 /home/vvk/public_html/yiicms/framework/web/widgets/CActiveForm.php(920): CModel->validate(NULL)
+#7 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(118): CActiveForm::validate(Object(Articles))
+#8 [internal function]: ArticleController->actionEdit('11')
+#9 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#10 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#12 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#14 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#18 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('edit')
+#20 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('article/edit')
+#21 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#22 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiicms/article/edit/11
+HTTP_REFERER=http://test.org/yiicms/article/edit/11
+---
+2014/11/03 19:11:53 [error] [exception.InvalidArgumentException] exception 'InvalidArgumentException' with message 'Empty string is not valid character' in /home/vvk/public_html/yiicms/protected/components/Utf8.php:115
+Stack trace:
+#0 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(78): Utf8::utf8ToCode('')
+#1 [internal function]: ArticleController->actionArticle('11')
+#2 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#3 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#4 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('article')
+#13 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('article/article')
+#14 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiicms/article/article/11
+HTTP_REFERER=http://test.org/yiicms/article/list/%D0%90
+---
+2014/11/04 10:07:29 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Articles.titile".' in /home/vvk/public_html/yiicms/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/db/ar/CActiveRecord.php(145): CComponent->__get('titile')
+#1 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(77): CActiveRecord->__get('titile')
+#2 [internal function]: ArticleController->actionArticle('12')
+#3 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#4 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#5 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('article')
+#14 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('article/article')
+#15 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiicms/article/article/12
+HTTP_REFERER=http://test.org/yiicms/article/list/%D0%96
+---
+2014/11/04 10:07:51 [error] [exception.InvalidArgumentException] exception 'InvalidArgumentException' with message 'Corrupted character: 1 tail bytes required' in /home/vvk/public_html/yiicms/protected/components/Utf8.php:153
+Stack trace:
+#0 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(80): Utf8::utf8ToCode('?')
+#1 [internal function]: ArticleController->actionArticle('12')
+#2 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#3 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#4 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('article')
+#13 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('article/article')
+#14 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yiicms/article/article/12
+HTTP_REFERER=http://test.org/yiicms/article/list/%D0%96
+---
+2014/11/04 12:35:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Необходима авторизация' in /home/vvk/public_html/yiicms/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), '?? ?????? ?????...')
+#2 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('autocomplete')
+#9 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('site/autocomple...')
+#10 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiicms/site/autocomplete?term=%D0%BF%D1%81
+HTTP_REFERER=http://test.org/yiicms/
+---
+2014/11/04 12:35:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Необходима авторизация' in /home/vvk/public_html/yiicms/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), '?? ?????? ?????...')
+#2 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('autocomplete')
+#9 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('site/autocomple...')
+#10 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiicms/site/autocomplete?term=%D0%BF%D1%81%D0%B8
+HTTP_REFERER=http://test.org/yiicms/
+---
+2014/11/04 12:35:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Необходима авторизация' in /home/vvk/public_html/yiicms/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), '?? ?????? ?????...')
+#2 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('autocomplete')
+#9 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('site/autocomple...')
+#10 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiicms/site/autocomplete?term=%D0%BF%D1%81
+HTTP_REFERER=http://test.org/yiicms/
+---
+2014/11/04 12:35:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Необходима авторизация' in /home/vvk/public_html/yiicms/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), '?? ?????? ?????...')
+#2 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('autocomplete')
+#9 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('site/autocomple...')
+#10 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiicms/site/autocomplete?term=%D0%B6%D0%B0
+HTTP_REFERER=http://test.org/yiicms/
+---
+2014/11/04 12:35:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Необходима авторизация' in /home/vvk/public_html/yiicms/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), '?? ?????? ?????...')
+#2 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('autocomplete')
+#9 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('site/autocomple...')
+#10 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiicms/site/autocomplete?term=%D0%B6%D0%B0%D1%80
+HTTP_REFERER=http://test.org/yiicms/
+---
+2014/11/04 12:35:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Необходима авторизация' in /home/vvk/public_html/yiicms/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), '?? ?????? ?????...')
+#2 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('autocomplete')
+#9 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('site/autocomple...')
+#10 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiicms/site/autocomplete?term=%D0%B6%D0%B0
+HTTP_REFERER=http://test.org/yiicms/
+---
+2014/11/04 12:35:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Необходима авторизация' in /home/vvk/public_html/yiicms/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/vvk/public_html/yiicms/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), '?? ?????? ?????...')
+#2 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('autocomplete')
+#9 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('site/autocomple...')
+#10 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiicms/site/autocomplete?term=%D0%B6%D0%B0
+HTTP_REFERER=http://test.org/yiicms/
+---
+2014/11/04 13:36:16 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (/home/vvk/public_html/yiicms/framework/web/helpers/CHtml.php:103)
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/helpers/CHtml.php(158): renderAttributes()
+#1 /home/vvk/public_html/yiicms/framework/web/helpers/CHtml.php(339): tag()
+#2 /home/vvk/public_html/yiicms/protected/views/site/find.php(3): beginForm()
+#3 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require()
+#4 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#5 /home/vvk/public_html/yiicms/framework/web/CController.php(869): SiteController->renderFile()
+#6 /home/vvk/public_html/yiicms/protected/components/views/findForm.php(15): SiteController->renderPartial()
+#7 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(130): require()
+#8 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): FindForm->renderInternal()
+#9 /home/vvk/public_html/yiicms/framework/web/widgets/CWidget.php(244): FindForm->renderFile()
+#10 /home/vvk/public_html/yiicms/protected/components/FindForm.php(11): FindForm->render()
+#11 /home/vvk/public_html/yiicms/framework/zii/widgets/CPortlet.php(97): FindForm->renderContent()
+#12 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(173): FindForm->run()
+#13 /home/vvk/public_html/yiicms/protected/views/layouts/main.php(72): SiteController->widget()
+#14 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(126): require()
+#15 /home/vvk/public_html/yiicms/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#16 /home/vvk/public_html/yiicms/framework/web/CController.php(784): SiteController->renderFile()
+#17 /home/vvk/public_html/yiicms/protected/controllers/SiteController.php(59): SiteController->render()
+#18 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#19 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams()
+#20 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#21 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#22 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#23 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#24 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#25 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#26 /home/vvk/public_html/yiicms/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#27 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): SiteController->run()
+#28 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#29 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#30 /home/vvk/public_html/yiicms/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiicms/
+in /home/vvk/public_html/yiicms/protected/views/site/find.php (3)
+in /home/vvk/public_html/yiicms/protected/components/views/findForm.php (15)
+in /home/vvk/public_html/yiicms/protected/components/FindForm.php (11)
+2014/11/04 19:16:16 [error] [php] Trying to get property of non-object (/home/vvk/public_html/yiicms/protected/views/article/article.php:10)
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CController.php(869): ArticleController->renderFile()
+#1 /home/vvk/public_html/yiicms/framework/web/CController.php(782): ArticleController->renderPartial()
+#2 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(77): ArticleController->render()
+#3 unknown(0): ArticleController->actionArticle()
+#4 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): ArticleController->runAction()
+#8 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): ArticleController->filterAccessControl()
+#11 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/vvk/public_html/yiicms/framework/web/CController.php(265): ArticleController->runActionWithFilters()
+#14 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): ArticleController->run()
+#15 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /home/vvk/public_html/yiicms/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiicms/article/article/search
+in /home/vvk/public_html/yiicms/protected/views/article/article.php (10)
+in /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php (77)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/04 19:20:59 [error] [php] Trying to get property of non-object (/home/vvk/public_html/yiicms/protected/views/article/list.php:15)
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CController.php(869): ArticleController->renderFile()
+#1 /home/vvk/public_html/yiicms/framework/web/CController.php(782): ArticleController->renderPartial()
+#2 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(177): ArticleController->render()
+#3 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(49): ArticleController->actionSearch()
+#4 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): ArticleController->runAction()
+#6 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): ArticleController->filterAccessControl()
+#9 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(265): ArticleController->runActionWithFilters()
+#12 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): ArticleController->run()
+#13 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/vvk/public_html/yiicms/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiicms/article/search
+in /home/vvk/public_html/yiicms/protected/views/article/list.php (15)
+in /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php (177)
+in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/04 19:31:56 [error] [php] Trying to get property of non-object (/home/vvk/public_html/yiicms/protected/views/article/list.php:15)
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/web/CController.php(869): ArticleController->renderFile()
+#1 /home/vvk/public_html/yiicms/framework/web/CController.php(782): ArticleController->renderPartial()
+#2 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(177): ArticleController->render()
+#3 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(49): ArticleController->actionSearch()
+#4 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): ArticleController->runAction()
+#6 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): ArticleController->filterAccessControl()
+#9 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(265): ArticleController->runActionWithFilters()
+#12 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): ArticleController->run()
+#13 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /home/vvk/public_html/yiicms/index.php(13): CWebApplication->run()
+REQUEST_URI=/yiicms/article/search
+in /home/vvk/public_html/yiicms/protected/views/article/list.php (15)
+in /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php (177)
+in /home/vvk/public_html/yiicms/index.php (13)

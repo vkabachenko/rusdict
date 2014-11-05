@@ -5,6 +5,13 @@
 class DatabaseCommand extends CConsoleCommand {
 /* @var $model User */
 
+    /*
+     * Смена административного пароля
+     * Параметры:
+     * -- старый пароль
+     * -- новый пароль
+     * Вызов: php yiic database password <oldpassword> <newpassword>
+     */
     public function ActionPassword($args) {
 
         if (count($args) != 2) {
@@ -44,6 +51,35 @@ class DatabaseCommand extends CConsoleCommand {
     }
 
 
+    /*
+     * Заполнение таблицы terms данными всех статей
+     * Первоначально -- полная очистка таблицы terms
+     * Вызов: php yiic database terms
+     */
+
+    public function ActionTerms() {
+
+        try {
+        // Очистка таблицы terms
+        Terms::model()->deleteAll();
+
+        // Массив всех статей:
+        $articles = Articles::model()->findAll();
+
+        // Заполнение таблицы Terms
+        foreach($articles as $article) {
+            $article->fillTerms();
+        }
+
+        echo "Заполнение закончено".PHP_EOL;
+        return 0;
+        }
+        catch (CException $e) {
+            echo "Ошибка заполнения".PHP_EOL;
+            return -1;
+        }
+
+    }
 
 
 
