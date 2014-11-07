@@ -178,6 +178,12 @@ class ArticleController extends Controller
                 with(array('idArticle'=>array('order'=>'idArticle.title')))->
                 findAllByAttributes(array('term'=>$searchString));
 
+            // если термины не найдены, переходим на полнотекстовый поиск
+            if (!$terms) {
+                $this->redirect(array('search/search','term'=>$searchString));
+            }
+
+            // выводим найденные статьи
             foreach($terms as $term) {
                 $navList[] = array('label'=>$term->idArticle->title,
                 'url'=>$this->createUrl('article',array('id'=>$term->id_article)));
