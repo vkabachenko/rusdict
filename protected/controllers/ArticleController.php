@@ -143,9 +143,16 @@ class ArticleController extends Controller
             $model->title = CHtml::encode(Utf8::mb_ucfirst($model->title));
 
 
-            if($model->save())
+            if($model->save()) {
+
+                // добавляем к индексу Zend Lucene Search
+                $lucene = new Lucene();
+                $lucene->Update($model->id);
+
                 $this->redirect(array('article','id'=>$model->id));
+            }
         }
+
         $this->render('edit',array('model'=>$model,));
 
     }
@@ -155,6 +162,11 @@ class ArticleController extends Controller
     {
             $model = Articles::model()->findByPk($id);
             $id_letter = $model->id_letter;
+
+            // удаляем из индекса Lucene
+            $lucene = new Lucene();
+            $lucene->Delete($model->id);
+
             $model->delete();
 
             $this->redirect(array('list','id'=>$id_letter));
@@ -169,7 +181,6 @@ class ArticleController extends Controller
         $this->listLetters();
 
         $searchString = trim($_POST['searchString']);
-
         $navList = array();
 
         if ($searchString) { // передана непустая строка
@@ -180,13 +191,17 @@ class ArticleController extends Controller
 
             // если термины не найдены, переходим на полнотекстовый поиск
             if (!$terms) {
-                $this->redirect(array('search/search','term'=>$searchString));
+                //$this->redirect(array('search/search','term'=>$searchString));
+                $lucene = new Lucene();
+                $navList = $lucene->Search($searchString);
             }
+            else {
+               // выводим найденные статьи
 
-            // выводим найденные статьи
-            foreach($terms as $term) {
-                $navList[] = array('label'=>$term->idArticle->title,
-                'url'=>$this->createUrl('article',array('id'=>$term->id_article)));
+               foreach($terms as $term) {
+                    $navList[] = array('label'=>$term->idArticle->title,
+                    'url'=>$this->createUrl('article',array('id'=>$term->id_article)));
+                 }
             }
         }
 

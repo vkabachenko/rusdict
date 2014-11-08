@@ -75,8 +75,8 @@ class Articles extends CActiveRecord
 
         // удаление всех терминов, связанных с данной статьей
         Terms::model()->deleteAllByAttributes(array('id_article'=>$this->id));
-
         $this->fillTerms();
+
 
         return true;
     }

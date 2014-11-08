@@ -81,8 +81,25 @@ class DatabaseCommand extends CConsoleCommand {
 
     }
 
+    /*
+     * Первоначальное заполнение индекса поиска Zend Lucene Search
+     * файлы индекса - protected/runtime/search
+     * Вызов: php yiic database searchIndex
+     */
+    public function ActionSearchIndex() {
 
+      try {
+        $lucene = new Lucene();
+        $lucene->Create();
+        echo "Индекс построен".PHP_EOL;
+        return 0;
+      }
+      catch (CException $e) {
+          echo "Ошибка построения индекса".PHP_EOL;
+          return -1;
+      }
 
+    }
 }
 
 

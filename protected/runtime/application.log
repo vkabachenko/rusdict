@@ -4023,3 +4023,50 @@ REQUEST_URI=/yiicms/article/article/3
 in /home/vvk/public_html/yiicms/protected/views/article/article.php (10)
 in /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php (86)
 in /home/vvk/public_html/yiicms/index.php (13)
+2014/11/08 12:40:47 [error] [exception.Zend_Search_Lucene_Exception] exception 'Zend_Search_Lucene_Exception' with message 'Field name "id_article" not found in document.' in /home/vvk/public_html/yiicms/protected/vendor/Zend/Search/Lucene/Document.php:104
+Stack trace:
+#0 /home/vvk/public_html/yiicms/protected/vendor/Zend/Search/Lucene/Document.php(118): Zend_Search_Lucene_Document->getField('id_article')
+#1 /home/vvk/public_html/yiicms/protected/vendor/Zend/Search/Lucene/Search/QueryHit.php(81): Zend_Search_Lucene_Document->getFieldValue('id_article')
+#2 /home/vvk/public_html/yiicms/protected/components/Lucene.php(57): Zend_Search_Lucene_Search_QueryHit->__get('id_article')
+#3 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(184): Lucene->Search('????????*')
+#4 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(49): ArticleController->actionSearch()
+#5 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('search')
+#14 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('article/search')
+#15 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yiicms/article/search
+HTTP_REFERER=http://test.org/yiicms/
+---
+2014/11/08 14:26:51 [error] [exception.Zend_Search_Lucene_Exception] exception 'Zend_Search_Lucene_Exception' with message 'Document id is out of the range.' in /home/vvk/public_html/yiicms/protected/vendor/Zend/Search/Lucene.php:1385
+Stack trace:
+#0 /home/vvk/public_html/yiicms/protected/components/Lucene.php(79): Zend_Search_Lucene->delete(Array)
+#1 /home/vvk/public_html/yiicms/protected/components/Lucene.php(63): Lucene->Delete('12')
+#2 /home/vvk/public_html/yiicms/protected/controllers/ArticleController.php(149): Lucene->Update('12')
+#3 [internal function]: ArticleController->actionEdit('12')
+#4 /home/vvk/public_html/yiicms/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#5 /home/vvk/public_html/yiicms/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#6 /home/vvk/public_html/yiicms/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /home/vvk/public_html/yiicms/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/vvk/public_html/yiicms/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /home/vvk/public_html/yiicms/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/vvk/public_html/yiicms/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/vvk/public_html/yiicms/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/vvk/public_html/yiicms/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(282): CController->run('edit')
+#15 /home/vvk/public_html/yiicms/framework/web/CWebApplication.php(141): CWebApplication->runController('article/edit')
+#16 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /home/vvk/public_html/yiicms/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yiicms/article/edit/12
+HTTP_REFERER=http://test.org/yiicms/article/edit/12
+---
