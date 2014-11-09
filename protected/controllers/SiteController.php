@@ -42,6 +42,7 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
+        $id_content = $this->action->id;
 
         if (!Yii::app()->user->isGuest) {
 
@@ -50,13 +51,16 @@ class SiteController extends Controller
                     'url'=>$this->createUrl('article/edit',array('id'=>'0'))),
                 array('label'=>'Раздел',
                     'url'=>$this->createUrl('section/grid')),
+                array('label'=>'Редактировать',
+                    'url'=>$this->createUrl('static/edit',array('id'=>$id_content))),
              );
         }
 
         $this->listLetters();
 
+        $model = Statics::model()->findByPk($id_content);
 
-		$this->render('index');
+		$this->render('index',array('model'=>$model,));
 	}
 
 
@@ -121,7 +125,29 @@ class SiteController extends Controller
     }
 
 
+/*
+ * Контакты
+ */
+    public function actionContacts()
+    {
 
+        $id_content = $this->action->id;
+
+        if (!Yii::app()->user->isGuest) {
+
+            $this->adminMenu = array(
+
+                array('label'=>'Редактировать',
+                    'url'=>$this->createUrl('static/edit',array('id'=>$id_content))),
+            );
+        }
+
+        $this->listLetters();
+
+        $model = Statics::model()->findByPk($id_content);
+
+        $this->render('contacts',array('model'=>$model,));
+    }
 
 
 	/**

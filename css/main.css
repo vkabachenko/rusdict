@@ -51,3 +51,8 @@ body
     background: url("../images/Find.gif") no-repeat;
     padding-left: 20px;
 }
+
+#contacts {
+    padding-bottom:10px;
+    text-align: center;
+}

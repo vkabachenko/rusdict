@@ -68,8 +68,12 @@ Yii::app()->clientScript->registerScript('btnSaveModalForm', "
 
         <div class="span2" id="adminSidebar">
             <?php if(Yii::app()->user->isGuest ||
-                ($this->id == 'site' && $this->action->id == 'index'))
-                $this->widget('FindForm'); ?>
+                ($this->id == 'site' && $this->action->id == 'index')) {
+                $this->widget('FindForm');
+                $this->widget('Contacts');
+            }
+
+            ?>
             <?php if(!Yii::app()->user->isGuest)
                 $this->widget('AdminMenu',array('menu'=>$this->adminMenu,)); ?>
         </div>

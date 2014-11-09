@@ -14,14 +14,12 @@ class m141103_072900_table_terms extends CDbMigration
 
         // Ошибка MySQL при формировании связи
 //        $this->addForeignKey('fArticle','dct_terms','id_article','dct_article','id','CASCADE','CASCADE');
-	}
+	    $this->execute("ALTER TABLE dct_terms ADD FOREIGN KEY ( id_article ) REFERENCES dct_articles (id) ON DELETE CASCADE ON UPDATE CASCADE ;");
+    }
 
 	public function down()
 	{
-		$this->dropIndex('idArticle','dct_terms');
         $this->dropTable('dct_terms');
-
-
 	}
 
 	/*
