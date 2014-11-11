@@ -11,6 +11,9 @@
 </head>
 
 <body>
+
+<div id="wrap">
+
 <?php
 
 $this->widget('bootstrap.widgets.TbNavbar', array(
@@ -81,10 +84,28 @@ Yii::app()->clientScript->registerScript('btnSaveModalForm', "
             <?php echo $content; ?>
         </div>
 
+    </div> <!-- row -->
+
+
+</div> <!-- main -->
+
+
+</div> <!-- wrap -->
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="span6">
+                <p>&copy;Научно-образовательная лаборатория региональных филологических исследований</p>
+            </div>
+            <div class="span6">
+                <a href="mailto:labrfi@yandex.ru" class="pull-right">labrfi@yandex.ru</a>
+            </div>
+        </div>
     </div>
 
-</div>
-
+</footer>
 
 
 </body>
