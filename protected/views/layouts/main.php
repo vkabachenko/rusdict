@@ -12,7 +12,7 @@
 
 <body>
 
-<div id="wrap">
+
 
 <?php
 
@@ -39,6 +39,7 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
             'htmlOptions' => array('class'=>'pull-right'),
             )
     ),
+    'htmlOptions'=>array('id'=>'topMenu',),
 )); ?>
 
 
@@ -67,7 +68,8 @@ Yii::app()->clientScript->registerScript('btnSaveModalForm', "
 
 
 <div id="main" class="container">
-    <div class="row">
+
+    <div class="row" id="mainRow">
 
         <div class="span2" id="adminSidebar">
             <?php if(Yii::app()->user->isGuest ||
@@ -84,23 +86,24 @@ Yii::app()->clientScript->registerScript('btnSaveModalForm', "
             <?php echo $content; ?>
         </div>
 
-    </div> <!-- row -->
+    </div> <!--     row -->
 
+    <div id="push"></div>
 
 </div> <!-- main -->
 
 
-</div> <!-- wrap -->
+
 
 
 <footer>
     <div class="container">
         <div class="row">
-            <div class="span6">
-                <p>&copy;Научно-образовательная лаборатория региональных филологических исследований</p>
+            <div class="span8">
+                <p>&copy; Научно-образовательная лаборатория региональных филологических исследований</p>
             </div>
-            <div class="span6">
-                <a href="mailto:labrfi@yandex.ru" class="pull-right">labrfi@yandex.ru</a>
+            <div class="span4">
+                <a href="mailto:labrfi@yandex.ru" class="pull-right" id="email">labrfi@yandex.ru</a>
             </div>
         </div>
     </div>
