@@ -68,7 +68,7 @@ class Articles extends CActiveRecord
             'terms' => 'Термины (через запятую)',
 		);
 	}
-
+/*
     protected function beforeSave(){
         if(!parent::beforeSave())
             return false;
@@ -80,7 +80,7 @@ class Articles extends CActiveRecord
 
         return true;
     }
-
+*/
 
     /*
      * Заполнение таблицы Terms для данной статьи

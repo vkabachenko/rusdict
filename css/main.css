@@ -1,3 +1,5 @@
+/* для layout main */
+
 html {
     height:100%;
 }
@@ -43,20 +45,20 @@ footer {
     padding-top:20px;
 }
 
-#email {
-    background: url("../images/Mail.gif") no-repeat;
-    padding-left: 20px;
-}
 
+/* Верхнее меню */
 .navbar {
     margin-bottom: 0;
 }
 
+/* Статьи словарных слов */
 .article p
 {
     text-align: justify;
     text-indent: 2em;
 }
+
+/* Левое меню */
 
 .portlet {
     border:1px solid #2c2c98;
@@ -72,6 +74,11 @@ footer {
     margin-bottom: 10px;
 }
 
+#email {
+    background: url("../images/Mail.gif") no-repeat;
+    padding-left: 20px;
+}
+
 #find {
     margin-bottom: 10px;
     text-align:center;
@@ -82,7 +89,29 @@ footer {
     padding-left: 20px;
 }
 
+
+/* Страница контакты */
 #contacts {
     padding-bottom:10px;
     text-align: center;
 }
+
+/* Список статей */
+#articleList ul {
+    list-style: none;
+}
+
+#articleList li {
+    margin:5px 0;
+    padding:5px 0;
+}
+
+#articleList li:nth-child(2n+1) {
+    background-color: #f4f9f9;
+}
+
+#articleList li:hover {
+    background-color: #f9e5f7;
+}
+
+

@@ -44,16 +44,20 @@
 
             $index = new Zend_Search_Lucene($this->_indexFiles);
 
-            $titles = $index->find($term);
+            $items = $index->find($term);
 
-            $navList = array();
-            foreach($titles as $title) {
-                $navList[] = array('label'=>$title->title,
-                'url'=>Yii::app()->
-                        createUrl('article/article',array('id'=>$title->id_article)));
+            $articles = array();
+            foreach($items as $item) {
+                $articles[] = $item->id_article;
             }
+            $criteria = new CDbCriteria();
+            $criteria->select = "id,title";
+            $criteria->order = "title";
+            $criteria->addInCondition('id',$articles);
 
-        return $navList;
+            $model = new CActiveDataProvider("Articles",array('criteria'=>$criteria));
+
+        return $model;
 
          }
 

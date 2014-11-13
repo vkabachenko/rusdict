@@ -51,16 +51,9 @@ class ArticleController extends Controller
         if ($idSection = Yii::app()->session['section']) {
             $criteria->condition .= " and id_section = $idSection";
         }
-        $titles = Articles::model()->findAll($criteria);
 
-        $navList = array();
-        foreach($titles as $title) {
-            $navList[] = array('label'=>$title->title,
-                'url'=>$this->createUrl('article',array('id'=>$title->id)));
-        }
-
-
-        $this->render('list',array('navList'=>$navList));
+        $model = new CActiveDataProvider("Articles",array('criteria'=>$criteria));
+        $this->render('articles',array('model'=>$model,'searchTitle'=>"Буква $id"));
     }
 
     /*
@@ -145,6 +138,11 @@ class ArticleController extends Controller
 
             if($model->save()) {
 
+                // удаление всех терминов, связанных с данной статьей
+                Terms::model()->deleteAllByAttributes(array('id_article'=>$model->id));
+                // добавляем новые термины
+                $model->fillTerms();
+
                 // добавляем к индексу Zend Lucene Search
                 $lucene = new Lucene();
                 $lucene->Update($model->id);
@@ -181,31 +179,37 @@ class ArticleController extends Controller
         $this->listLetters();
 
         $searchString = trim($_POST['searchString']);
-        $navList = array();
+        $model = null;
 
         if ($searchString) { // передана непустая строка
 
              $terms =   Terms::model()->
-                with(array('idArticle'=>array('order'=>'idArticle.title')))->
+                with('idArticle')->
                 findAllByAttributes(array('term'=>$searchString));
 
             // если термины не найдены, переходим на полнотекстовый поиск
             if (!$terms) {
-                //$this->redirect(array('search/search','term'=>$searchString));
                 $lucene = new Lucene();
-                $navList = $lucene->Search($searchString);
+                $model = $lucene->Search($searchString);
             }
             else {
                // выводим найденные статьи
-
+               $articles = array();
                foreach($terms as $term) {
-                    $navList[] = array('label'=>$term->idArticle->title,
-                    'url'=>$this->createUrl('article',array('id'=>$term->id_article)));
+                   $articles[] = $term->idArticle->id;
                  }
+               $criteria = new CDbCriteria();
+               $criteria->select = "id,title";
+               $criteria->order = "title";
+               $criteria->addInCondition('id',$articles);
+
+               $model = new CActiveDataProvider("Articles",array('criteria'=>$criteria));
+
+
             }
         }
 
-        $this->render('list',array('navList'=>$navList));
+        $this->render('articles',array('model'=>$model,'searchTitle'=>$searchString));
     }
 
 
