@@ -6,18 +6,18 @@
 <head>
 
     <meta charset="utf-8">
-    <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    <title><?php echo CHtml::encode(Yii::app()->name); ?></title>
 
 </head>
 
 <body>
 
-
-
+<header>
+<div id="banner"></div>
 <?php
-
+// Верхнее горизонтальное меню
 $this->widget('bootstrap.widgets.TbNavbar', array(
-    'brandLabel' => 'Начало', //
+    'brandLabel' => 'Главная', //
     'display' => null, // default is static to top
     'items' => array(
 
@@ -39,11 +39,12 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
             'htmlOptions' => array('class'=>'pull-right'),
             )
     ),
-    'htmlOptions'=>array('id'=>'topMenu',),
 )); ?>
 
+</header>
 
 <?php
+// Форма входа пользователя
 if (Yii::app()->user->isGuest) {
 
 $this->widget('bootstrap.widgets.TbModal', array(
@@ -88,12 +89,10 @@ Yii::app()->clientScript->registerScript('btnSaveModalForm', "
 
     </div> <!--     row -->
 
+    <!-- для перекрытия футера - см. http://getbootstrap.com/2.3.2/examples/sticky-footer.html -->
     <div id="push"></div>
 
 </div> <!-- main -->
-
-
-
 
 
 <footer>
