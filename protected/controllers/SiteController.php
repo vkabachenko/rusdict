@@ -11,17 +11,18 @@ class SiteController extends Controller
     public function filters() {
         return array(
           'accessControl',
-          'ajaxOnly + autocomplete'
-        );
-    }
+          'ajaxOnly + autocomplete',
+          'listLetters + index,contacts',
+          );
+      }
 
-/*
- *      Контроль доступа (используется в фильтре AccessControl
- */
-    public function accessRules()
-    {
-        return array(
-            array('allow',  // allow all users to access 'index' and 'view' actions.
+  /*
+   *      Контроль доступа (используется в фильтре AccessControl
+   */
+      public function accessRules()
+      {
+          return array(
+              array('allow',  // allow all users to access 'index' and 'view' actions.
                 'actions'=>array('index','login','error','autocomplete','contacts'),
                 'users'=>array('*'),
             ),
@@ -56,7 +57,6 @@ class SiteController extends Controller
              );
         }
 
-        $this->listLetters();
 
         $model = Statics::model()->findByPk($id_content);
 
@@ -142,7 +142,6 @@ class SiteController extends Controller
             );
         }
 
-        $this->listLetters();
 
         $model = Statics::model()->findByPk($id_content);
 

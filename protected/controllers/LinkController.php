@@ -14,7 +14,8 @@ class LinkController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-            'ajaxOnly + update,delete'
+            'ajaxOnly + update,delete',
+            'listLetters + index',
 		);
 	}
 
@@ -79,7 +80,6 @@ class LinkController extends Controller
 	public function actionIndex($id)
 	{
 
-        $this->listLetters();
 
         // Запомнить текущую статью
         Yii::app()->session['article'] = $id;

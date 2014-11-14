@@ -6,6 +6,7 @@ class SectionController extends Controller
         return array(
             'accessControl',
             'ajaxOnly + update',
+            'listLetters + grid',
         );
     }
 
@@ -75,18 +76,12 @@ class SectionController extends Controller
         if(isset($_POST['Sections'])){
             $model->attributes=$_POST['Sections'];
             if($model->save()){
-//                if(Yii::app()->request->isAjaxRequest){
                     echo 'success';
                     Yii::app()->end();
-//                }
-//                else
-//                    throw new CHttpException(404,'The requested page does not exist.');
             }
         }
-//        if(Yii::app()->request->isAjaxRequest)
+
             $this->renderPartial('edit',array('model'=>$model), false, true);
-//        else
-//            throw new CHttpException(404,'The requested page does not exist.');
     }
 
     /**

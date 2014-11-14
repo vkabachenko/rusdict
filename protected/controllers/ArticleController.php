@@ -5,6 +5,7 @@ class ArticleController extends Controller
     public function filters() {
         return array(
             'accessControl',
+            'listLetters + list,article,edit,search',
         );
     }
 
@@ -14,7 +15,7 @@ class ArticleController extends Controller
     public function accessRules()
     {
         return array(
-            array('allow',  // allow all users to access 'index' and 'view' actions.
+            array('allow',  // allow all users to access
                 'actions'=>array('list','article','search'),
                 'users'=>array('*'),
             ),
@@ -34,7 +35,6 @@ class ArticleController extends Controller
 
     public function actionList($id) {
 
-        $this->listLetters();
 
         if (!Yii::app()->user->isGuest) {
 
@@ -61,8 +61,6 @@ class ArticleController extends Controller
      */
     public function actionArticle($id) {
 
-        $this->listLetters();
-
         if (!Yii::app()->user->isGuest) {
             $this->adminMenu = array(
                 array('label'=>'Редактировать',
@@ -84,8 +82,6 @@ class ArticleController extends Controller
      * Редактирование выбранной статьи или создание новой, если $id == 0
      */
     public function actionEdit($id) {
-
-        $this->listLetters();
 
         // Для новой статьи ссылки можно добавить только после создания
         if ($id) {
@@ -176,7 +172,6 @@ class ArticleController extends Controller
  */
     public function actionSearch() {
 
-        $this->listLetters();
 
         $searchString = trim($_POST['searchString']);
         $model = null;

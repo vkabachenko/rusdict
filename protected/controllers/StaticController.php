@@ -10,6 +10,7 @@ class StaticController extends Controller
 public function filters() {
 return array(
 'accessControl',
+'listLetters + edit',
 );
 }
 

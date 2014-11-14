@@ -29,7 +29,7 @@ class Controller extends CController
      *Добавление верхнего горизонтального меню
 */
 
-    public function listLetters() {
+    public function filterListLetters($filterChain) {
 
 // Разделы
      $critSection = new CDbCriteria();
@@ -67,6 +67,8 @@ class Controller extends CController
             $this->menu[] = array('label'=>$letter->id,
                 'url'=>$this->createUrl('article/list',array('id'=>$letter->id)));
         }
+
+        $filterChain->run();
 
     }
 
