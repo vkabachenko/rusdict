@@ -10,7 +10,7 @@
 
             setlocale(LC_CTYPE, 'ru_RU.UTF-8');
             Zend_Search_Lucene_Analysis_Analyzer::setDefault(
-                new Zend_Search_Lucene_Analysis_Analyzer_Common_Utf8());
+                new Zend_Search_Lucene_Analysis_Analyzer_Common_Utf8_CaseInsensitive());
 
             $this->_indexFiles = Yii::getPathOfAlias('application').'/runtime/search';
         }
@@ -44,7 +44,9 @@
 
             $index = new Zend_Search_Lucene($this->_indexFiles);
 
-            $items = $index->find($term);
+            $termQuery = Zend_Search_Lucene_Search_QueryParser::parse($term, 'utf-8');
+
+            $items = $index->find($termQuery);
 
             $articles = array();
             foreach($items as $item) {
