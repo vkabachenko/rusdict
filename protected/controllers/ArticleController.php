@@ -24,6 +24,7 @@ class ArticleController extends Controller
             ),
             array('deny',  // deny all users
                 'users'=>array('*'),
+                'deniedCallback' => array($this,'deniedUrl'),
             ),
         );
     }

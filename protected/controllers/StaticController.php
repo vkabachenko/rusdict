@@ -26,6 +26,7 @@ array('allow', // allow authenticated users to access all actions
 ),
 array('deny',  // deny all users
 'users'=>array('*'),
+'deniedCallback' => array($this,'deniedUrl'),
 ),
 );
 }

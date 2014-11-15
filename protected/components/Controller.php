@@ -72,6 +72,12 @@ class Controller extends CController
 
     }
 
+    public function deniedUrl() {
+
+        $this->redirect(Yii::app()->homeUrl);
+
+    }
+
 
 
 }
