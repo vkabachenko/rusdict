@@ -1,6 +1,7 @@
 <?php
 /* @var $this SiteController */
 /* @var $model Statics */
+/* @var $login String */
 
 ?>
 
@@ -11,4 +12,11 @@
 <div class="article">
 <?php echo $model->content; ?>
 </div>
+
+<?php
+    if ($login) {
+        Yii::app()->clientScript->registerScript('showloginForm',
+            "$('#loginModalForm').modal('show');", CClientScript::POS_READY);
+    }
+?>
 

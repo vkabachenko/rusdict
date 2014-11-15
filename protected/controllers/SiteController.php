@@ -40,7 +40,7 @@ class SiteController extends Controller
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
-	public function actionIndex()
+	public function actionIndex($login=null)
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
@@ -61,7 +61,7 @@ class SiteController extends Controller
 
         $model = Statics::model()->findByPk($id_content);
 
-		$this->render('index',array('model'=>$model,));
+		$this->render('index',array('model'=>$model,'login'=>$login,));
 	}
 
 

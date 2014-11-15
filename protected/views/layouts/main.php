@@ -54,15 +54,11 @@ $this->widget('bootstrap.widgets.TbModal', array(
     'footer' => array(
         TbHtml::button('Войти',
             array( 'color' => TbHtml::BUTTON_COLOR_PRIMARY,
-                'id'=>'saveModalForm',)),
+                'id'=>'saveModalForm',
+                'onclick'=>'$("#loginForm").submit()')),
         TbHtml::button('Закрыть', array('data-dismiss' => 'modal')),
     ),
 ));
-
-Yii::app()->clientScript->registerScript('btnSaveModalForm', "
-    jQuery('#saveModalForm').click(function(){
-        jQuery('#loginForm').submit();
-    });", CClientScript::POS_READY);
 
 }
 ?>

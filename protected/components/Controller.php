@@ -72,9 +72,12 @@ class Controller extends CController
 
     }
 
+
+    // при запуске неразрешенного url (вызывается в фильтре)
+    
     public function deniedUrl() {
 
-        $this->redirect(Yii::app()->homeUrl);
+        $this->redirect(array('/site/index','login'=>'login'));
 
     }
 
