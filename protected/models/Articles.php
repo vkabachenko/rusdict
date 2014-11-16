@@ -37,6 +37,7 @@ class Articles extends CActiveRecord
 			array('id_letter', 'length', 'max'=>1),
 			array('title', 'length', 'max'=>128),
             array('title','checkFirstLetter'), // 1-й символ - буква кириллицы
+            array('title','unique','caseSensitive'=>false),
 			array('article, terms', 'safe'),
 		);
 	}
