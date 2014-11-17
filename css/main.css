@@ -19,7 +19,7 @@ header {
 
 #banner {
     height:80px;
-    background: #fafafa;
+    background: url("../images/BookShelf.jpg") repeat-x;
 }
 
 #main {
