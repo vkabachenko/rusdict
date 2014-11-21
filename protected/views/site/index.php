@@ -10,7 +10,13 @@
 </h2>
 
 <div class="article">
-<?php echo $model->content; ?>
+<?php
+
+$this->beginWidget('CHtmlPurifier');
+echo $model->content;
+$this->endWidget();
+
+?>
 </div>
 
 <?php

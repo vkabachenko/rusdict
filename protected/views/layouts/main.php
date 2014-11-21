@@ -80,7 +80,11 @@ $this->widget('bootstrap.widgets.TbModal', array(
                 $this->widget('AdminMenu',array('menu'=>$this->adminMenu,)); ?>
         </div>
         <div class="span10" id="contentSidebar">
-            <?php echo $content; ?>
+            <?php
+
+            echo $content;
+
+            ?>
         </div>
 
     </div> <!--     row -->

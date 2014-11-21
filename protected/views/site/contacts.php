@@ -9,5 +9,11 @@
 </h2>
 
 <div>
-    <?php echo $model->content; ?>
+    <?php
+
+    $this->beginWidget('CHtmlPurifier');
+    echo $model->content;
+    $this->endWidget();
+
+    ?>
 </div>

@@ -7,12 +7,12 @@ $this->pageTitle=Yii::app()->name;
 ?>
 <h3>
     Раздел: <?php
-    echo $model->idSection->name;
+    echo strip_tags($model->idSection->name);
     ?>
 </h3>
 
 <h2>
-    <?php echo $model->title; ?>
+    <?php echo strip_tags($model->title); ?>
 
 </h2>
 
@@ -20,7 +20,12 @@ $this->pageTitle=Yii::app()->name;
 <?php if ($model->article): ?>
 
 <div class="article">
-<?php echo $model->article; ?>
+<?php
+$this->beginWidget('CHtmlPurifier');
+echo $model->article;
+$this->endWidget();
+
+?>
 </div>
 
 <?php endif; ?>
@@ -30,7 +35,7 @@ $this->pageTitle=Yii::app()->name;
 
 <h3>Термины</h3>
 <p>
-    <?php echo $model->terms ?>
+    <?php echo strip_tags($model->terms) ?>
 </p>
 
 <?php endif; ?>
@@ -52,11 +57,12 @@ $this->pageTitle=Yii::app()->name;
 
 
 <?php
+if (!Yii::app()->user->isGuest) {
 // модальное окно подтверждения удаления
 $this->widget('bootstrap.widgets.TbModal', array(
 'id' => 'confirmDeleteForm',
 'header' => 'Подтвердите удаление',
-'content' => 'Словарное слово: '.$model->title,
+'content' => 'Заголовок: '.$model->title,
 'footer' => array(
 TbHtml::button('Удалить',
 array( 'submit'=>array('delete','id'=>$model->id),
@@ -64,4 +70,5 @@ array( 'submit'=>array('delete','id'=>$model->id),
 TbHtml::button('Отмена', array('data-dismiss' => 'modal')),
 ),
 ));
+}
 ?>

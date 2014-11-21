@@ -1,5 +1,5 @@
 
-<h3>Поиск: <?php echo $searchTitle ?></h3>
+<h3>Поиск: <?php echo CHtml::encode($searchTitle) ?></h3>
 <?php
 /* @var $model CActiveDataProvider */
 /* @var $searchTitle String */

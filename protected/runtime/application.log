@@ -4071,3 +4071,19 @@ REQUEST_URI=/yiicms/article/edit/12
 HTTP_REFERER=http://test.org/yiicms/article/edit/12
 ---
 2014/11/16 10:46:43 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yiicms.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2014/11/21 20:44:02 [error] [exception.Zend_Search_Lucene_Exception] exception 'Zend_Search_Lucene_Exception' with message 'File '/home/vvk/public_html/yiicms/protected/runtime/search/segments_4' is not readable.' in /home/vvk/public_html/yiicms/protected/vendor/Zend/Search/Lucene/Storage/File/Filesystem.php:56
+Stack trace:
+#0 /home/vvk/public_html/yiicms/protected/vendor/Zend/Search/Lucene/Storage/Directory/Filesystem.php(359): Zend_Search_Lucene_Storage_File_Filesystem->__construct('/home/vvk/publi...')
+#1 /home/vvk/public_html/yiicms/protected/vendor/Zend/Search/Lucene.php(551): Zend_Search_Lucene_Storage_Directory_Filesystem->getFileObject('segments_4')
+#2 /home/vvk/public_html/yiicms/protected/components/Lucene.php(24): Zend_Search_Lucene->__construct('/home/vvk/publi...', true)
+#3 /home/vvk/public_html/yiicms/protected/commands/DatabaseCommand.php(93): Lucene->Create()
+#4 [internal function]: DatabaseCommand->ActionSearchIndex()
+#5 /home/vvk/public_html/yiicms/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(DatabaseCommand), Array)
+#6 /home/vvk/public_html/yiicms/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#7 /home/vvk/public_html/yiicms/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#8 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#9 /home/vvk/public_html/yiicms/framework/yiic.php(33): CApplication->run()
+#10 /home/vvk/public_html/yiicms/protected/yiic.php(7): require_once('/home/vvk/publi...')
+#11 /home/vvk/public_html/yiicms/protected/yiic(4): require_once('/home/vvk/publi...')
+#12 {main}
+---
