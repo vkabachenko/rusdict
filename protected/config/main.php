@@ -57,17 +57,12 @@ return array(
 			'urlFormat'=>'path',
             'showScriptName'=>false,
 			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-               '<controller:\w+>/<action:\w+>/<id:\w+>'=>'<controller>/<action>',
+                '<action:\w+>'=>'site/<action>',
+                '<controller:\w+>/<action:\w+>/<id>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
             ),
-/*
-		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		),
-*/
+
 		// uncomment the following to use a MySQL database
 
 		'db'=>array(
