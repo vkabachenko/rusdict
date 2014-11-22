@@ -109,7 +109,7 @@ class SectionController extends Controller
     {
         $model=Sections::model()->findByPk($id);
         if($model===null)
-            throw new CHttpException(404,'The requested page does not exist.');
+            throw new CHttpException(404,'Указанная страница не найдена.');
         return $model;
     }
 

@@ -77,7 +77,8 @@ class FileController extends Controller{
 
         // получить модель для grid
         $criteria = new CDbCriteria;
-        $criteria->condition = "id_article = $id";
+        $criteria->condition = "id_article = :id_article";
+        $criteria->params = array(':id_article'=>$id);
         $criteria->order = "title";
 
         $model = new CActiveDataProvider('Files',

@@ -102,7 +102,8 @@ class LinkController extends Controller
 
         // получить модель для grid
         $criteria = new CDbCriteria;
-        $criteria->condition = "id_article = $id";
+        $criteria->condition = "id_article = :id_article";
+        $criteria->params = array(':id_article'=>$id);
         $criteria->with = "idLink";
 
         $sort = new CSort();
@@ -112,7 +113,7 @@ class LinkController extends Controller
                 'desc'=>'idLink.title desc',
             ),
         );
-        $sort->defaultOrder = 'id_link';
+        $sort->defaultOrder = array('id_link'=>false);
 
         $model = new CActiveDataProvider('Links',
                 array('criteria'=>$criteria,'sort'=>$sort,));
@@ -135,7 +136,7 @@ class LinkController extends Controller
 	{
 		$model=Links::model()->findByPk($id);
 		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+			throw new CHttpException(404,'Указанная страница не найдена.');
 		return $model;
 	}
 
@@ -148,7 +149,8 @@ class LinkController extends Controller
 // Статьи
         $criteria = new CDbCriteria();
         $criteria->order = 'title';
-        $criteria->condition = "id <> $id";
+        $criteria->condition = "id <> :id";
+        $criteria->params = array(':id'=>$id);
         $criteria->select = 'id, id_letter, title';
         $articles = Articles::model()->findAll($criteria);
 

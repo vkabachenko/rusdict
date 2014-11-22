@@ -17,7 +17,6 @@ return array(
 	'preload'=>array('log'),
     // path aliases
     'aliases' => array(
-//     'bootstrap' => realpath(__DIR__ . '/../extensions/bootstrap'),
    ),
 
 	// autoloading model and component classes
@@ -98,6 +97,5 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 
-        'fileDir'=>Yii::getPathOfAlias('webroot.files').DIRECTORY_SEPARATOR,
 	),
 );

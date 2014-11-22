@@ -48,9 +48,13 @@ class ArticleController extends Controller
         $criteria = new CDbCriteria();
         $criteria->select = "id,title";
         $criteria->order = "title";
-        $criteria->condition = "id_letter = '".$id."'";
+
+        $criteria->addCondition('id_letter = :id_letter');
+        $criteria->params = array(':id_letter'=>"$id");
         if ($idSection = Yii::app()->session['section']) {
-            $criteria->condition .= " and id_section = $idSection";
+            $criteria->addCondition('id_section = :id_section');
+            $criteria->params=CMap::mergeArray($criteria->params,
+                array(':id_section'=>$idSection));
         }
 
         $model = new CActiveDataProvider("Articles",array('criteria'=>$criteria));
@@ -75,7 +79,12 @@ class ArticleController extends Controller
 
         $model = Articles::model()->findByPk($id);
 
+        if ($model) {
             $this->render('article',array('model'=>$model));
+        }
+        else {
+            throw new CHttpException(404,'Указанная запись не найдена');
+        }
 
     }
 
@@ -215,7 +224,7 @@ class ArticleController extends Controller
      */
     public function hasLinks($id) {
 
-        return Links::model()->find("id_article = $id");
+        return Links::model()->find('id_article = :id_article',array(':id_article'=>$id,));
 
     }
 
@@ -228,7 +237,8 @@ class ArticleController extends Controller
 
         $allLinks = array();
 
-        $links = Links::model()->with('idLink')->findAll("id_article = $id");
+        $links = Links::model()->with('idLink')
+            ->findAll('id_article = :id_article',array(':id_article'=>$id,));
 
         foreach ($links as $link) {
 
@@ -246,7 +256,7 @@ class ArticleController extends Controller
      */
     public function hasFiles($id) {
 
-        return Files::model()->find("id_article = $id");
+        return Files::model()->find('id_article = :id_article',array(':id_article'=>$id,));
 
     }
 
@@ -260,8 +270,9 @@ class ArticleController extends Controller
         $allFiles = array();
 
         $files = Files::model()->findAll(array(
-            'condition'=>"id_article = $id",
-            'order'=>'title',));
+            'condition'=>"id_article = :id_article",
+            'order'=>'title',
+            'params'=>array(':id_article'=>$id,),));
 
         foreach ($files as $file) {
 
