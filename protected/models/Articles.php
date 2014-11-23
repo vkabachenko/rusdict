@@ -7,6 +7,7 @@
  * @property integer $id
  * @property string $id_letter
  * @property string $title
+ * @property string $pure_title
  * @property string $article
  * @property string $terms
  * @property integer $id_section

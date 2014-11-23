@@ -56,7 +56,7 @@ class DatabaseCommand extends CConsoleCommand {
      * Первоначально -- полная очистка таблицы terms
      * Вызов: php yiic database terms
      */
-
+/* @var $article Articles */
     public function ActionTerms() {
 
         try {
@@ -66,9 +66,11 @@ class DatabaseCommand extends CConsoleCommand {
         // Массив всех статей:
         $articles = Articles::model()->findAll();
 
-        // Заполнение таблицы Terms
+        // Заполнение таблицы Terms и поля pure_title
         foreach($articles as $article) {
             $article->fillTerms();
+            $article->pure_title = $article->delAccent($article->title);
+            $article->save();
         }
 
         echo "Заполнение закончено".PHP_EOL;

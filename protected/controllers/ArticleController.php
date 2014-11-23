@@ -47,7 +47,7 @@ class ArticleController extends Controller
 
         $criteria = new CDbCriteria();
         $criteria->select = "id,title";
-        $criteria->order = "title";
+        $criteria->order = "pure_title";
 
         $criteria->addCondition('id_letter = :id_letter');
         $criteria->params = array(':id_letter'=>"$id");
@@ -58,7 +58,7 @@ class ArticleController extends Controller
         }
 
         $model = new CActiveDataProvider("Articles",array('criteria'=>$criteria));
-        $this->render('articles',array('model'=>$model,'searchTitle'=>"Буква $id"));
+        $this->render('articles',array('model'=>$model,'searchTitle'=>"буква $id"));
     }
 
     /*
@@ -140,6 +140,7 @@ class ArticleController extends Controller
             $model->id_letter = $letter;
 
             $model->title = CHtml::encode(Utf8::mb_ucfirst($model->title));
+            $model->pure_title = $model->delAccent($model->title);
 
 
             if($model->save()) {
