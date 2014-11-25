@@ -40,7 +40,7 @@ class Controller extends CController
      // заголовок выпадающего меню - из сессии
 
      if ($id = Yii::app()->session['section']) {
-         $label = Sections::model()->findByPk($id)->name;
+         $label = Utf8::mb_trunc(Sections::model()->findByPk($id)->name,25);
      }
      else {
          $label = 'Все разделы';
@@ -50,10 +50,12 @@ class Controller extends CController
      $dropdownMenu = array();
      $dropdownMenu[] = array('label'=>'Все разделы',
          'url'=>$this->createUrl('section/list',array('id'=>0)));
+
      foreach ($sections as $section) {
          $dropdownMenu[] = array('label'=>$section->name,
              'url'=>$this->createUrl('section/list',array('id'=>$section->id)));
      }
+
 
      $this->menu[] = array('label'=>$label,'items'=>$dropdownMenu);
 

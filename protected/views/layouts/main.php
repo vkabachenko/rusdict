@@ -19,6 +19,8 @@
 $this->widget('bootstrap.widgets.TbNavbar', array(
     'brandLabel' => 'Главная', //
     'display' => null, // default is static to top
+    'collapse' => true, // responsive
+
     'items' => array(
 
         array(
@@ -79,6 +81,7 @@ $this->widget('bootstrap.widgets.TbModal', array(
             <?php if(!Yii::app()->user->isGuest)
                 $this->widget('AdminMenu',array('menu'=>$this->adminMenu,)); ?>
         </div>
+
         <div class="span10" id="contentSidebar">
             <?php
 
@@ -95,7 +98,7 @@ $this->widget('bootstrap.widgets.TbModal', array(
 </div> <!-- main -->
 
 
-<footer>
+<footer class="visible-desktop"> <!-- на мобильных устр-вах футера нет -->
     <div class="container">
         <div class="row">
             <div class="span8">

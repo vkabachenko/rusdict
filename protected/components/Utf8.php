@@ -30,6 +30,31 @@
          return Utf8::mb_firstLetter($str) . mb_substr($str, 1, mb_strlen($str)-1, $encoding);
      }
 
+
+/*
+*     Урезать строку до необходимой длины
+*/
+
+     public static function mb_trunc($str,$len,$encoding = 'utf-8')
+     {
+         if($encoding === NULL)
+         {
+             $encoding    = mb_internal_encoding();
+         }
+
+
+         if ($len >= mb_strlen($str,$encoding)) {
+             return $str;
+         }
+         else {
+             return (mb_substr($str,0,$len-3,$encoding).'...');
+         }
+
+     }
+
+
+
+
      /**
       * Преобразование кода символа Юникода в символ в UTF-8
       *
