@@ -80,7 +80,30 @@ class ArticleController extends Controller
         $model = Articles::model()->findByPk($id);
 
         if ($model) {
-            $this->render('article',array('model'=>$model));
+            // Комментарии
+            $criteria = new CDbCriteria();
+            $criteria->order = "date_created DESC";
+            $criteria->addCondition('id_article = :id_article');
+            $criteria->addCondition('status = :status');
+            $criteria->params = array(':id_article'=>"$id",':status'=>'published',);
+            $comments = new CActiveDataProvider("Comments",array('criteria'=>$criteria));
+
+            // Новый комментарий
+            $newcomment = new Comments;
+            $newcomment->id_article = $id;
+            $newcomment->status = 'waiting';
+
+            if(isset($_POST['Comments'])) {
+                $newcomment->attributes=$_POST['Comments'];
+                if($newcomment->validate()) {
+                    $newcomment->save();
+                    Yii::app()->user->setFlash('comment',strip_tags($newcomment->comment));
+                }
+            }
+
+            $this->render('article',array('model'=>$model,
+                'comments'=>$comments,'newcomment'=>$newcomment,
+                ));
         }
         else {
             throw new CHttpException(404,'Указанная запись не найдена');

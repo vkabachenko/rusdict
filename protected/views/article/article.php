@@ -2,6 +2,9 @@
 /**
  * @var $this ArticleController
  * @var $model Articles
+ * @var $comments CActiveDataProvider
+ * @var $newcomment Comments
+ * @var $id_article int
  */
 $this->pageTitle=Yii::app()->name;
 ?>
@@ -54,7 +57,47 @@ $this->endWidget();
 
 <?php endif; ?>
 
+    <h3>Комментарии</h3>
 
+<?php if(Yii::app()->user->hasFlash('comment')): ?>
+    <?php $yourComment = true; ?>
+    <a name="anchorComment"></a>
+    <div id="yourComment">
+        <p>Ваш комментарий (отправлен на премодерацию):</p>
+        <p>
+            <?php echo Yii::app()->user->getFlash('comment'); ?>
+        </p>
+    </div>
+    <?php
+    Yii::app()->clientScript->registerScript('anchorComment',
+        'location.hash="anchorComment";', CClientScript::POS_READY);
+    ?>
+
+<?php endif; ?>
+
+
+
+    <?php
+    $this->widget('bootstrap.widgets.TbListView', array(
+    'dataProvider'=>$comments,
+    'id'=>'comments',
+    'itemView'=>'_comment',
+    'itemsTagName'=>'div',
+    'template' => '{items}{pager}',
+    'emptyText'=>'<em>Комментариев пока нет</em>',
+    ));
+
+    if (!isset($yourComment)) {
+        // Кнопка нового комментария
+        echo TbHtml::button('Оставить комментарий',
+        array( 'id'=>'btnComment',
+            'color' => TbHtml::BUTTON_COLOR_PRIMARY,
+            'onclick'=>'$("#commentform").show();$(this).hide();'
+        ));
+
+        $this->renderPartial('commentform',array('model'=>$newcomment,));
+    }
+    ?>
 
 <?php
 if (!Yii::app()->user->isGuest) {

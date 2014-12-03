@@ -115,3 +115,42 @@ footer {
 }
 
 
+/* Комментарии */
+#comments {
+    color:#959595;
+}
+
+#comments .author {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#comments .comment {
+    width:90%;
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-indent: 16px;
+    text-align: justify;
+}
+
+#btnComment {
+    margin:10px;
+}
+
+#yourComment {
+    background:#979797;
+    color:#ffffff;
+    padding:10px;
+    margin-bottom: 10px;
+}
+
+#yourComment p:first-child {
+    margin-bottom:5px;
+    font-weight: bold;
+}
+
+#yourComment p:last-child {
+    margin:0;
+    text-indent: 16px;
+    text-align: justify;
+}

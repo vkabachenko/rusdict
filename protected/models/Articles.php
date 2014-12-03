@@ -55,6 +55,8 @@ class Articles extends CActiveRecord
             'idSection' => array(self::BELONGS_TO, 'Sections', 'id_section'),
             'files' => array(self::HAS_MANY, 'Files', 'id_article'),
             'terms' => array(self::HAS_MANY, 'Terms', 'id_article'),
+            'comments' => array(self::HAS_MANY, 'Comments', 'id_article'),
+
 		);
 	}
 
@@ -70,19 +72,6 @@ class Articles extends CActiveRecord
             'terms' => 'Термины (через запятую)',
 		);
 	}
-/*
-    protected function beforeSave(){
-        if(!parent::beforeSave())
-            return false;
-
-        // удаление всех терминов, связанных с данной статьей
-        Terms::model()->deleteAllByAttributes(array('id_article'=>$this->id));
-        $this->fillTerms();
-
-
-        return true;
-    }
-*/
 
     /*
      * Заполнение таблицы Terms для данной статьи
