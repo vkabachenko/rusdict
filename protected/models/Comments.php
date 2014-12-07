@@ -8,7 +8,7 @@
  * @property string $username
  * @property string $email
  * @property string $date_created
- * @property string $status
+ * @property string $id_status
  * @property string $comment
  * @property integer $id_article
  *
@@ -36,7 +36,7 @@ class Comments extends CActiveRecord
 			array('username, email', 'required'),
 			array('username, email', 'length', 'max'=>60),
             array('email', 'email'),
-			array('comment', 'safe'),
+			array('comment,id_status', 'safe'),
 		);
 	}
 
@@ -49,6 +49,7 @@ class Comments extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'idArticle' => array(self::BELONGS_TO, 'Articles', 'id_article'),
+            'idStatus' => array(self::BELONGS_TO, 'Status', 'id_status'),
 		);
 	}
 

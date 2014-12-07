@@ -4087,3 +4087,39 @@ Stack trace:
 #11 /home/vvk/public_html/yiicms/protected/yiic(4): require_once('/home/vvk/publi...')
 #12 {main}
 ---
+2014/12/04 08:51:32 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1025 Error on rename of './yiicms/#sql-44c_73' to './yiicms/dct_comments' (errno: 150). The SQL statement executed was: ALTER TABLE `dct_comments` DROP COLUMN `id_status`.
+2014/12/04 08:51:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1025 Error on rename of './yiicms/#sql-44c_73' to './yiicms/dct_comments' (errno: 150). The SQL statement executed was: ALTER TABLE `dct_comments` DROP COLUMN `id_status`' in /home/vvk/public_html/yiicms/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/db/CDbCommand.php(1389): CDbCommand->execute()
+#1 /home/vvk/public_html/yiicms/framework/db/CDbMigration.php(299): CDbCommand->dropColumn('dct_comments', 'id_status')
+#2 /home/vvk/public_html/yiicms/protected/migrations/m141204_053257_add_status_table.php(25): CDbMigration->dropColumn('dct_comments', 'id_status')
+#3 /home/vvk/public_html/yiicms/framework/cli/commands/MigrateCommand.php(410): m141204_053257_add_status_table->down()
+#4 /home/vvk/public_html/yiicms/framework/cli/commands/MigrateCommand.php(145): MigrateCommand->migrateDown('m141204_053257_...')
+#5 [internal function]: MigrateCommand->actionDown(Array)
+#6 /home/vvk/public_html/yiicms/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /home/vvk/public_html/yiicms/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /home/vvk/public_html/yiicms/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#10 /home/vvk/public_html/yiicms/framework/yiic.php(33): CApplication->run()
+#11 /home/vvk/public_html/yiicms/protected/yiic.php(7): require_once('/home/vvk/publi...')
+#12 /home/vvk/public_html/yiicms/protected/yiic(4): require_once('/home/vvk/publi...')
+#13 {main}
+---
+2014/12/04 08:54:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1553 Cannot drop index 'id_status': needed in a foreign key constraint. The SQL statement executed was: DROP INDEX `id_status` ON `dct_comments`.
+2014/12/04 08:54:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1553 Cannot drop index 'id_status': needed in a foreign key constraint. The SQL statement executed was: DROP INDEX `id_status` ON `dct_comments`' in /home/vvk/public_html/yiicms/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/vvk/public_html/yiicms/framework/db/CDbCommand.php(1474): CDbCommand->execute()
+#1 /home/vvk/public_html/yiicms/framework/db/CDbMigration.php(390): CDbCommand->dropIndex('id_status', 'dct_comments')
+#2 /home/vvk/public_html/yiicms/protected/migrations/m141204_053257_add_status_table.php(25): CDbMigration->dropIndex('id_status', 'dct_comments')
+#3 /home/vvk/public_html/yiicms/framework/cli/commands/MigrateCommand.php(410): m141204_053257_add_status_table->down()
+#4 /home/vvk/public_html/yiicms/framework/cli/commands/MigrateCommand.php(145): MigrateCommand->migrateDown('m141204_053257_...')
+#5 [internal function]: MigrateCommand->actionDown(Array)
+#6 /home/vvk/public_html/yiicms/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 /home/vvk/public_html/yiicms/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 /home/vvk/public_html/yiicms/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 /home/vvk/public_html/yiicms/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#10 /home/vvk/public_html/yiicms/framework/yiic.php(33): CApplication->run()
+#11 /home/vvk/public_html/yiicms/protected/yiic.php(7): require_once('/home/vvk/publi...')
+#12 /home/vvk/public_html/yiicms/protected/yiic(4): require_once('/home/vvk/publi...')
+#13 {main}
+---

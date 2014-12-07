@@ -53,6 +53,8 @@ class SiteController extends Controller
                     'url'=>$this->createUrl('article/edit',array('id'=>'0'))),
                 array('label'=>'Раздел',
                     'url'=>$this->createUrl('section/grid')),
+                array('label'=>'Комментарии',
+                    'url'=>$this->createUrl('comment/update')),
                 array('label'=>'Редактировать',
                     'url'=>$this->createUrl('static/edit',array('id'=>$id_content))),
              );

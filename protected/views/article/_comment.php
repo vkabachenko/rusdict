@@ -9,6 +9,6 @@
 </p>
 <p class="comment">
     <?php
-        echo $data->comment;
+        echo strip_tags($data->comment);
     ?>
 </p>

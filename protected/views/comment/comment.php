@@ -1,10 +1,10 @@
 <div>
 
     <?php
-    /*
-     @var $this Controller
-     @var $model Comments
-     */
+
+    /*  @var Controller $this  */
+    /* @var  Comments $model */
+
 
     $form=$this->beginWidget('CActiveForm', array(
         'id'=>'commentform',
@@ -40,7 +40,7 @@
 
 
     <div>
-        <?php echo CHtml::submitButton('Отправить'); ?>
+        <?php echo CHtml::submitButton('Отправить',array('class'=>'btn btn-primary',)); ?>
     </div>
 
     <?php $this->endWidget(); ?>

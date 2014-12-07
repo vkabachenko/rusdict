@@ -84,14 +84,15 @@ class ArticleController extends Controller
             $criteria = new CDbCriteria();
             $criteria->order = "date_created DESC";
             $criteria->addCondition('id_article = :id_article');
-            $criteria->addCondition('status = :status');
-            $criteria->params = array(':id_article'=>"$id",':status'=>'published',);
+            $criteria->addCondition('id_status = :status');
+            $criteria->params = array(':id_article'=>$id,
+                ':status'=>Status::model()->getStatusCodeFromValue('Опубликовано'),);
             $comments = new CActiveDataProvider("Comments",array('criteria'=>$criteria));
 
             // Новый комментарий
             $newcomment = new Comments;
             $newcomment->id_article = $id;
-            $newcomment->status = 'waiting';
+            $newcomment->id_status = Status::model()->getStatusCodeFromValue('Ожидание');
 
             if(isset($_POST['Comments'])) {
                 $newcomment->attributes=$_POST['Comments'];
@@ -308,5 +309,13 @@ class ArticleController extends Controller
         return $allFiles;
     }
 
+/*
+    private function getStatusCodeFromValue($value) {
+
+        $status = Status::model()->findByAttributes(array('name'=>$value));
+        return $status->id;
+
+    }
+*/
 }
 ?>

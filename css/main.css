@@ -115,7 +115,7 @@ footer {
 }
 
 
-/* Комментарии */
+/* Комментарии в статье*/
 #comments {
     color:#959595;
 }
@@ -153,4 +153,13 @@ footer {
     margin:0;
     text-indent: 16px;
     text-align: justify;
+}
+
+/* Комментарии в админ меню */
+
+.inlineLabel {
+    display:inline-block;
+    height:30px;
+    line-height:30px;
+    margin:0 10px 0 0;
 }

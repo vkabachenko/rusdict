@@ -1,10 +1,10 @@
 <div>
 
 <?php
-/*
- @var $this Controller
- @var $model Articles
- */
+
+/* @var  Controller $this */
+/* @var  Articles $model */
+
 
 $form=$this->beginWidget('CActiveForm', array(
     'id'=>'editForm',

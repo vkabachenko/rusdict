@@ -95,7 +95,7 @@ $this->endWidget();
             'onclick'=>'$("#commentform").show();$(this).hide();'
         ));
 
-        $this->renderPartial('commentform',array('model'=>$newcomment,));
+        $this->renderPartial('//comment/comment',array('model'=>$newcomment,));
     }
     ?>
 
