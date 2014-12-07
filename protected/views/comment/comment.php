@@ -37,7 +37,21 @@
         <?php echo $form->error($model,'comment'); ?>
     </div>
 
-
+        <?php if(CCaptcha::checkRequirements() &&
+                Yii::app()->user->isGuest): ?>
+    <div class="captcha">
+        <?php
+            echo $form->labelEx($model,'verificationCode');
+            $this->widget('CCaptcha');
+        ?>
+        <p>
+        <?php
+            echo $form->textField($model,'verificationCode');
+            echo $form->error($model,'verificationCode');
+        ?>
+        </p>
+    </div>
+        <?php endif ?>
 
     <div>
         <?php echo CHtml::submitButton('Отправить',array('class'=>'btn btn-primary',)); ?>

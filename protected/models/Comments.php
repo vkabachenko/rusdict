@@ -20,6 +20,9 @@ class Comments extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+
+    public $verificationCode;
+
 	public function tableName()
 	{
 		return 'dct_comments';
@@ -37,6 +40,9 @@ class Comments extends CActiveRecord
 			array('username, email', 'length', 'max'=>60),
             array('email', 'email'),
 			array('comment,id_status', 'safe'),
+            array('verificationCode','captcha',
+                    'allowEmpty'=>!CCaptcha::checkRequirements()
+                        || !Yii::app()->user->isGuest),
 		);
 	}
 
@@ -62,6 +68,7 @@ class Comments extends CActiveRecord
 			'username' => 'Имя',
 			'email' => 'E-mail',
 			'comment' => 'Текст комментария',
+            'verificationCode' => 'Текст с картинки',
 		);
 	}
 

@@ -163,3 +163,11 @@ footer {
     line-height:30px;
     margin:0 10px 0 0;
 }
+
+.captcha a {
+    margin-left:10px;
+}
+
+.captcha p {
+    margin-top:10px;
+}

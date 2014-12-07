@@ -25,6 +25,13 @@ class CommentController extends Controller
         );
     }
 
+    public function actions() {
+        return array(
+            'captcha'=>array('class'=>'CCaptchaAction',)
+        );
+    }
+
+
     public function actionComment($id) {
 
         $model = Comments::model()->with('idArticle')->findByPk($id);

@@ -16,7 +16,7 @@ class ArticleController extends Controller
     {
         return array(
             array('allow',  // allow all users to access
-                'actions'=>array('list','article','search'),
+                'actions'=>array('list','article','search','captcha'),
                 'users'=>array('*'),
             ),
             array('allow', // allow authenticated users to access all actions
@@ -26,6 +26,12 @@ class ArticleController extends Controller
                 'users'=>array('*'),
                 'deniedCallback' => array($this,'deniedUrl'),
             ),
+        );
+    }
+
+    public function actions() {
+        return array(
+            'captcha'=>array('class'=>'CCaptchaAction',)
         );
     }
 
