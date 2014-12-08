@@ -155,6 +155,11 @@ footer {
     text-align: justify;
 }
 
+img.social_share {
+    margin-left: 20px;
+    cursor:pointer;
+}
+
 /* Комментарии в админ меню */
 
 .inlineLabel {

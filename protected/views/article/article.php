@@ -57,6 +57,28 @@ $this->endWidget();
 
 <?php endif; ?>
 
+<!-- Кнопки социальных сетей -->
+<p>Поделиться:
+    <img class="social_share" data-type="vk"
+         src="<?php echo Yii::app()->baseUrl.'/images/vkontakte.png' ?>"
+         width="32" height="32" alt="vkontakte">
+    <img class="social_share" data-type="fb"
+         src="<?php echo Yii::app()->baseUrl.'/images/facebook.png' ?>"
+         width="32" height="32" alt="facebook">
+
+    <img class="social_share" data-type="gg"
+         src="<?php echo Yii::app()->baseUrl.'/images/googleplus.png' ?>"
+         width="32" height="32" alt="googleplus">
+<?php
+Yii::app()->clientScript->registerScriptFile(Yii::app()->baseUrl.'/js/socbuttons.js',
+    CClientScript::POS_HEAD);
+Yii::app()->clientScript->registerScript('socialShare',
+    '$(document).on("click", "img.social_share", function(){
+    Share.go(this);});',CClientScript::POS_READY);
+?>
+</p>
+<!-- Кнопки социальных сетей -->
+
     <h3>Комментарии</h3>
 
 <?php if(Yii::app()->user->hasFlash('comment')): ?>
