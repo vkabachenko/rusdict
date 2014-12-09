@@ -104,6 +104,7 @@ class ArticleController extends Controller
                 $newcomment->attributes=$_POST['Comments'];
                 if($newcomment->validate()) {
                     $newcomment->save();
+                    $this->mailComment($newcomment);
                     Yii::app()->user->setFlash('comment',strip_tags($newcomment->comment));
                 }
             }
@@ -315,13 +316,28 @@ class ArticleController extends Controller
         return $allFiles;
     }
 
-/*
-    private function getStatusCodeFromValue($value) {
+    // Сообщить админу о присланном комменте
 
-        $status = Status::model()->findByAttributes(array('name'=>$value));
-        return $status->id;
+    private function mailComment($comment) {
+
+        $article = Articles::model()->findByPk($comment->id_article);
+
+        $name='=?UTF-8?B?'.base64_encode($comment->username).'?=';
+        $subject='=?UTF-8?B?'.base64_encode('Rusdict: комментарий к статье '.
+                $article->title).'?=';
+        $headers="From: $name <{$comment->email}>\r\n".
+            "Reply-To: {$comment->email}\r\n".
+            "MIME-Version: 1.0\r\n".
+            "Content-Type: text/plain; charset=UTF-8";
+
+        mail(Yii::app()->params['adminEmail'],$subject,
+            CHtml::encode($comment->comment),$headers);
+
+        /* В зависимости от настроек адрес отправителя и Reply-To могут
+            не соответствовать установленным в этом скрипте
+        */
 
     }
-*/
+
 }
 ?>
