@@ -1,6 +1,15 @@
 <?php
  class Utf8 {
 
+    /*
+     * В нижний регистр
+     */
+     public static function mb_lowCase($str, $encoding = 'utf-8') {
+
+         return mb_strtolower($str,$encoding);
+
+     }
+
 
      /*
       * Первая буква в строке (с учетом многобайтовой кодировки)

@@ -1,6 +1,6 @@
 <?php
-/* @var $this SectionController */
-/* @var $model Sections */
+/* @var SectionController $this */
+/* @var  Sections $model */
 
 $this->widget('bootstrap.widgets.TbModal', array(
     'id' => 'idUpdate',

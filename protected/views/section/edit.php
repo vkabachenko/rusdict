@@ -1,7 +1,7 @@
 <?php
-/* @var $this SectionController */
-/* @var $model Sections */
-/* @var $form CActiveForm */
+/* @var SectionController $this */
+/* @var Sections $model */
+/* @var CActiveForm $form */
 ?>
 
 <div class="form">

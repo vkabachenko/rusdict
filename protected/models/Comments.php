@@ -72,6 +72,18 @@ class Comments extends CActiveRecord
 		);
 	}
 
+    public function beforeSave() {
+
+        if(parent::beforeSave())
+        {
+            $this->username = strip_tags($this->username);
+            $this->comment = strip_tags($this->comment);
+
+            return true;
+        }
+        else
+            return false;
+    }
 
 	/**
 	 * Returns the static model of the specified AR class.
