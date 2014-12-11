@@ -117,7 +117,7 @@ class Articles extends CActiveRecord
      */
     public function delAccent($str) {
 
-        $str = mb_strtolower($str,'utf-8');
+        $str = Utf8::mb_lowCase($str);
 
         $accent = Utf8::codeToUtf8(769); // знак ударения
         $pattern = array('á','é','ó','ό',$accent);
@@ -129,6 +129,31 @@ class Articles extends CActiveRecord
 
         return $str;
     }
+
+    /*
+     * Преобразование DOM статьи для вставки всплывающих
+     * подсказок для сокращений
+     * Предварительно каждое сокращение должно быть обернуто в
+     * <span style="color:#FF0000;">
+     */
+
+    public function setTooltip() {
+
+        // http://realadmin.ru/coding/replace-between-tags.html
+
+        $str = preg_replace_callback('|(<span style="color:#FF0000">)(.+?)(</span>)|isu',
+            function($matches){
+                $abbrev = $matches[2];
+                $record = Abbrev::model()->findByPk(Utf8::mb_lowCase($abbrev)); // расшифровка
+                $text = $record ? $record->text : $abbrev;
+                $matches[2] = TbHtml::tooltip($abbrev, '#', $text); // html подсказки
+
+                return $matches[1].$matches[2].$matches[3];
+            },
+            $this->article);
+        return $str;
+      }
+
 
 
 	/**

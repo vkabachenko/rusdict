@@ -25,7 +25,7 @@ $this->pageTitle=Yii::app()->name;
 <div class="article">
 <?php
 $this->beginWidget('CHtmlPurifier');
-echo $model->article;
+echo $model->setTooltip();
 $this->endWidget();
 
 ?>
