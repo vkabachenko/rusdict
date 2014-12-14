@@ -120,8 +120,8 @@ class Articles extends CActiveRecord
         $str = Utf8::mb_lowCase($str);
 
         $accent = Utf8::codeToUtf8(769); // знак ударения
-        $pattern = array('á','é','ó','ό',$accent);
-        $replacement = array('а','е','о','о','');
+        $pattern = array('á','é','ó','ό','ý',$accent);
+        $replacement = array('а','е','о','о','у','');
 
         for ($i=0; $i<sizeof($pattern); $i++) {
             $str = mb_ereg_replace($pattern[$i], $replacement[$i], $str);

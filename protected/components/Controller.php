@@ -15,6 +15,9 @@ class Controller extends CController
 	 */
 	public $menu=array();
     public $adminMenu=array();
+    public $pageTitle = '';
+    public $description = '';
+    public $keywords = '';
 
 
     public function beforeAction($action) {
@@ -67,7 +70,8 @@ class Controller extends CController
 
         foreach ($letters as $letter) {
             $this->menu[] = array('label'=>$letter->id,
-                'url'=>$this->createUrl('article/list',array('id'=>$letter->id)));
+                'url'=>$this->createUrl('article/list',array('id'=>$letter->id)),
+                'linkOptions'=>array('rel'=>'nofollow',));
         }
 
         $filterChain->run();

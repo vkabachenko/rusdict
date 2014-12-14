@@ -1,4 +1,4 @@
-<?php /* @var $this Controller */ ?>
+<?php /* @var Controller $this */ ?>
 
 <!DOCTYPE html>
 <html>
@@ -6,7 +6,23 @@
 <head>
 
     <meta charset="utf-8">
-    <title><?php echo CHtml::encode(Yii::app()->name); ?></title>
+    <link rel="canonical" href="<?php echo Yii::app()->getBaseUrl(true) . '/' . Yii::app()->request->getPathInfo(); ?>" />
+
+    <?php if ($this->description): ?>
+        <meta name="description" content="<?php echo strip_tags($this->description); ?>" />
+    <?php endif ?>
+
+    <?php if ($this->keywords): ?>
+        <meta name="keywords" content="<?php echo strip_tags($this->keywords); ?>" />
+    <?php endif ?>
+
+    <title>
+        <?php
+        $title = $this->pageTitle ? ' - '.$this->pageTitle : '';
+        echo strip_tags(Yii::app()->name).$title;
+        ?>
+    </title>
+
 
 </head>
 
@@ -18,6 +34,7 @@
 // Верхнее горизонтальное меню
 $this->widget('bootstrap.widgets.TbNavbar', array(
     'brandLabel' => 'Главная', //
+    'brandOptions'=>array('rel'=>'nofollow',),
     'display' => null, // default is static to top
     'collapse' => true, // responsive
 
@@ -35,7 +52,9 @@ $this->widget('bootstrap.widgets.TbNavbar', array(
                 'url' => Yii::app()->user->isGuest ?
                         $this->createUrl('#') : $this->createUrl('site/logout'),
                'linkOptions' => Yii::app()->user->isGuest ?
-                       array('data-toggle'=>'modal','data-target'=>'#loginModalForm') : array(),
+                       array('data-toggle'=>'modal',
+                           'data-target'=>'#loginModalForm','rel'=>'nofollow',)
+                       : array('rel'=>'nofollow',),
                 ),
             ),
             'htmlOptions' => array('class'=>'pull-right'),

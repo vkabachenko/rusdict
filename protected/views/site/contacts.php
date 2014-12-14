@@ -1,6 +1,9 @@
 <?php
-/* @var $this SiteController */
-/* @var $model Statics */
+/* @var SiteController $this */
+/* @var Statics $model  */
+/* @var Controller $this */
+
+$this->pageTitle = 'Контакты';
 
 ?>
 

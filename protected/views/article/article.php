@@ -1,12 +1,17 @@
 <?php
 /**
- * @var $this ArticleController
- * @var $model Articles
- * @var $comments CActiveDataProvider
- * @var $newcomment Comments
- * @var $id_article int
+ * @var ArticleController $this
+ * @var Articles $model
+ * @var CActiveDataProvider $comments
+ * @var Comments $newcomment
+ * @var int $id_article
  */
-$this->pageTitle=Yii::app()->name;
+$this->pageTitle = $model->title;
+
+$this->keywords = Utf8::mb_lowCase(
+    $model->delAccent($model->title.', '.$model->terms));
+
+$this->description = Utf8::mb_trunc($model->article,200);
 ?>
 <h3>
     Раздел: <?php
