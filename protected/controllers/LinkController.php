@@ -31,10 +31,7 @@ class LinkController extends Controller
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'users'=>array('@'),
 			),
-			array('deny',  // deny all users
-				'users'=>array('*'),
-                'deniedCallback' => array($this,'deniedUrl'),
-			),
+            $this->denyFilter($this),
 		);
 	}
 

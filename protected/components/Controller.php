@@ -74,15 +74,21 @@ class Controller extends CController
 
     }
 
+    /*
+     * Вызывается в конце каждого фильтра.
+     * Перенаправляет пользователя на страницу авторизации
+     * при попытке совершить запрещенное действие
+     */
+    public function denyFilter($controller) {
 
-    // при запуске неразрешенного url (вызывается в фильтре)
-
-    public function deniedUrl() {
-
-        $this->redirect(array('/site/index','login'=>'login'));
-
-    }
-
+    return  array('deny',  // deny all users
+                'users'=>array('*'),
+                 'deniedCallback' => function(){
+                     Yii::app()->getController() // $this нельзя в PHP 5.3
+                         ->redirect(array('/site/index','login'=>'login'));
+                 },
+            );
+}
 
 
 }
