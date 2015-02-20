@@ -25,9 +25,10 @@
     <div>
 
         <?php echo $form->labelEx($model,'content'); ?>
-        <?php $this->widget('ext.editMe.widgets.ExtEditMe',
+        <?php $this->widget('ext.editCK.EditCK',
             array('model'=>$model,'attribute'=>'content',
-                'height'=>'400',));?>
+                'config'=>array('height'=>'400',),
+                ));?>
     </div>
 
 

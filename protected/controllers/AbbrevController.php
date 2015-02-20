@@ -39,6 +39,10 @@ class AbbrevController extends Controller
         );
 
         $model = new Abbrev('Search');
+        $model->unsetAttributes();  // clear any default values
+
+        if(isset($_GET['Abbrev']))
+            $model->attributes=$_GET['Abbrev'];
 
         $this->render('grid',array(
             'model'=>$model,

@@ -35,9 +35,11 @@ $form=$this->beginWidget('CActiveForm', array(
     <div>
 
         <?php echo $form->labelEx($model,'article'); ?>
-        <?php $this->widget('ext.editMe.widgets.ExtEditMe',
+        <?php $this->widget('ext.editCK.EditCK',
             array('model'=>$model,'attribute'=>'article',
-            'height'=>'400',));?>
+                'config'=>array('height'=>'400',
+                                'extraPlugins'=>'abbr',),
+            ));?>
     </div>
 
     <div>

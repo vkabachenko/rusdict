@@ -130,30 +130,22 @@ class Articles extends CActiveRecord
         return $str;
     }
 
-    /*
-     * Преобразование DOM статьи для вставки всплывающих
-     * подсказок для сокращений
-     * Предварительно каждое сокращение должно быть обернуто в
-     * <span style="color:#FF0000;">
-     */
 
-    public function setTooltip() {
-
+    public function setAbbrev() {
         // http://realadmin.ru/coding/replace-between-tags.html
 
-        $str = preg_replace_callback('|(<span style="color:#FF0000">)(.+?)(</span>)|isu',
+        $str = preg_replace_callback('|(<abbr.*?>)(.+?)(</abbr>)|isu',
             function($matches){
                 $abbrev = $matches[2];
                 $record = Abbrev::model()->findByPk(Utf8::mb_lowCase($abbrev)); // расшифровка
                 $text = $record ? $record->text : $abbrev;
-                $matches[2] = TbHtml::tooltip($abbrev, '#', $text); // html подсказки
+                $matches[1] = "<abbr title=\"$text\">";
 
                 return $matches[1].$matches[2].$matches[3];
             },
             $this->article);
         return $str;
-      }
-
+    }
 
 
 	/**

@@ -30,7 +30,7 @@ $this->description = Utf8::mb_trunc($model->article,200);
 <div class="article">
 <?php
 $this->beginWidget('CHtmlPurifier');
-echo $model->setTooltip();
+echo $model->setAbbrev();
 $this->endWidget();
 
 ?>
