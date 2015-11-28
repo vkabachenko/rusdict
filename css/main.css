@@ -51,6 +51,11 @@ footer {
     margin-bottom: 0;
 }
 
+.navbar .nav > li > a {
+    padding-left:10px;
+    padding-right:10px;
+}
+
 /* Статьи словарных слов */
 .article p
 {
