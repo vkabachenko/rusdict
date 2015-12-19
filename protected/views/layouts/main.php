@@ -120,12 +120,19 @@ $this->widget('bootstrap.widgets.TbModal', array(
 <footer class="visible-desktop"> <!-- на мобильных устр-вах футера нет -->
     <div class="container">
         <div class="row">
-            <div class="span8">
-                <p>&copy; Научно-образовательная лаборатория региональных филологических исследований</p>
+            <div class="span6">
+                &copy; Научно-образовательная лаборатория региональных филологических исследований, 2014-2016
             </div>
-            <div class="span4">
-                <a href="mailto:labrfi@yandex.ru" class="pull-right" id="email">labrfi@yandex.ru</a>
+            <div class="span2">
+                Автор словаря <a href="mailto:bolshakova55@yandex.ru">Н.В. Большакова</a>
             </div>
+            <div class="span2">
+                Программирование <a href="mailto:vkabachenko@gmail.com">В.В. Кабаченко</a>
+            </div>
+            <div class="span2">
+                Контент-менеджер <a href="mailto:prosergik@gmail.com">С. Веселов</a>
+            </div>
+
         </div>
     </div>
 

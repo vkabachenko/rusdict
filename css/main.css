@@ -38,11 +38,17 @@ header {
     height: 60px;
 }
 
+/* Подвал */
+
 footer {
     background-color: #fafafa;
     color:#999;
     height: 40px;
     padding-top:20px;
+}
+
+footer a {
+    display:block;
 }
 
 
@@ -77,11 +83,6 @@ footer {
     font-weight: bold;
     padding:10px 0;
     margin-bottom: 10px;
-}
-
-#email {
-    background: url("../images/Mail.gif") no-repeat;
-    padding-left: 20px;
 }
 
 #find {
