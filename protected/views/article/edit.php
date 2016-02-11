@@ -45,7 +45,7 @@ $form=$this->beginWidget('CActiveForm', array(
     <div>
         <?php echo $form->labelEx($model,'terms'); ?>
         <?php echo $form->textField($model,'terms',
-            array('size'=>255,'maxlength'=>255,'style'=>'width:450px;')); ?>
+            array('style'=>'width:450px;')); ?>
         <?php echo $form->error($model,'terms'); ?>
     </div>
 

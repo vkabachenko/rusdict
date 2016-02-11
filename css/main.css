@@ -69,6 +69,11 @@ footer a {
     text-indent: 2em;
 }
 
+.article table p
+{
+    text-indent: 0;
+}
+
 /* Левое меню */
 
 .portlet {
